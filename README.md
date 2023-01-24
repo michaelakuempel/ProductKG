@@ -1,5 +1,5 @@
 
-# ProductKG - A product knowledge graph linking to semantic Digital Twin environment information
+# ProductKG - A product knowledge graph
 
 ProductKG is a knowledge graph created from Web information, interlinking different ontologies designed for retail and household applications. It is based on a merged product taxonomy reflecting the product classification in grocery stores and drugstores that is linked to a product location ontology created from a robot belief state while performing stocktaking in a retail store as depicted in the following picture:<br> 
 <img src="UseCaseImg/semDTCompose2.jpg" width="600" alt="semantic Digital Twin"/><br>
