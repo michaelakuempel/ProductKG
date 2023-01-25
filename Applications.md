@@ -7,7 +7,7 @@ layout: default
 
 Please also check out our web applications on this website: <a href="http://nonfoodkg.informatik.uni-bremen.de/">ProductKG web apps</a>
 
-These are some example applications that use NonFoodKG information:
+These are some example applications that use the knowledge graph:
 
 <table style="table-layout: fixed;width:100%;">
   <tr>
