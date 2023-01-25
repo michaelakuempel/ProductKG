@@ -1,0 +1,3674 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/NonFoodKG/allergen"
+     xml:base="http://purl.org/NonFoodKG/allergen"
+     xmlns:gr="http://purl.org/goodrelations/v1#"
+     xmlns:sm="https://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:tax="http://purl.org/NonFoodKG/product-taxonomy#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doid="http://purl.obolibrary.org/obo/doid.owl#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Label="http://knowrob.org/kg/Label.owl#"
+     xmlns:trust="http://purl.org/NonFoodKG/trust#"
+     xmlns:allergen="http://purl.org/NonFoodKG/allergen#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:ingredients="http://purl.org/NonFoodKG/nonfoodingredients#">
+    <owl:Ontology rdf:about="http://purl.org/NonFoodKG/allergen">
+        <owl:versionIRI rdf:resource="http://purl.org/NonFoodKG/allergen/2.1"/>
+        <dct:contributor>Michaela Kümpel, Karin Doberstein</dct:contributor>
+        <dct:license rdf:datatype="xsd:anyURI">https://opendatacommons.org/licenses/by/1-0/</dct:license>
+        <rdfs:comment>The allergen ontology contains contact allergen info about ingredients of non-food products according to information from the FDA web page: https://www.fda.gov
+Its allergens and classes are linked to the ingredients ontology as well as https://www.wikidata.org, http://www.productontology.org, https://www.ebi.ac.uk/chebi/, https://bioportal.bioontology.org/ontologies/NDFRT/,  https://go.drugbank.com/</rdfs:comment>
+        <sm:copyright>Copyright (c) 2021 Michaela Kümpel
+
+This work is licensed under Open Data Commons Attribution License (ODC-BY 1.0 license).
+
+You are free:
+
+    To share: To copy, distribute and use the database.
+    To create: To produce works from the database.
+    To adapt: To modify, transform and build upon the database.
+
+As long as you:
+
+    Attribute: Attribute the work to the original authors. You must attribute any public use of the database, or works produced from the database. For any use or redistribution of the database, or works produced from it, you must make clear to others the license of the database and keep intact any notices on the original database.</sm:copyright>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/NonFoodKG/trust#source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#source"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/trust#wikientry -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#wikientry"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/depiction -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/depiction"/>
+    
+
+
+    <!-- https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright -->
+
+    <owl:AnnotationProperty rdf:about="https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#causes -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/allergen#causes">
+        <owl:inverseOf rdf:resource="http://purl.org/NonFoodKG/allergen#has_cause"/>
+        <rdfs:domain rdf:resource="http://purl.org/NonFoodKG/allergen#Allergen"/>
+        <rdfs:range rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#ECHA_website"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#has_cause -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/allergen#has_cause">
+        <rdfs:domain rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:range rdf:resource="http://purl.org/NonFoodKG/allergen#Allergen"/>
+        <trust:wikientry rdf:resource="http://purl.org/NonFoodKG/allergen#has_cause"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#has_depiction -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/allergen#has_depiction">
+        <rdfs:domain rdf:resource="http://purl.org/NonFoodKG/allergen#Allergen"/>
+        <rdfs:range rdf:resource="http://purl.org/NonFoodKG/allergen#HazardClassification"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#ECHA_website"/>
+        <rdfs:comment>This relation adds a depiction of hazard classification to an allergen.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#has_trigger -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/allergen#has_trigger">
+        <rdfs:label xml:lang="de">has_trigger</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#triggers_allergy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/allergen#triggers_allergy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">triggers_allergy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://trdf.sourceforge.net/trustvocab#trustworthiness -->
+
+    <owl:DatatypeProperty rdf:about="http://trdf.sourceforge.net/trustvocab#trustworthiness">
+        <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isRealizedBy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#isRealizedBy">
+        <rdfs:domain rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#milk -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#milk">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_4376"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <rdfs:label xml:lang="de">Milch</rdfs:label>
+        <rdfs:label xml:lang="en">milk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/shop.owl#Fruit -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/shop.owl#Fruit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060503"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Obst</rdfs:label>
+        <rdfs:label xml:lang="en">fruit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/shop.owl#Vegetable -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/shop.owl#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0070334"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Gemüse</rdfs:label>
+        <rdfs:label xml:lang="en">vegetable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kg/allergen#Acid -->
+
+    <owl:Class rdf:about="http://knowrob.org/kg/allergen#Acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0040001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0040001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060524"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#shrimp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Garnelenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">shrimp allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060057">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420177"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Glutenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">gluten allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060492 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060492">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_4377"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#chicken_egg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Hühnereiallergie</rdfs:label>
+        <rdfs:label xml:lang="en">chicken egg allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060495 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060495">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001293"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Schalentierallergie</rdfs:label>
+        <rdfs:label xml:lang="en">shellfish allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060503 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060503">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Fruchtallergie</rdfs:label>
+        <rdfs:label xml:lang="en">fruit allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060504 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060504">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060503"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#apple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Apfelallergie</rdfs:label>
+        <rdfs:label xml:lang="en">apple allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060505 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060505">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060503"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#apricot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Aprikosenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">apricot allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060506 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060506">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060503"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#cherry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Kirschallergie</rdfs:label>
+        <rdfs:label xml:lang="en">cherry allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060508 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060508">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060503"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#orange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Orangenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">orange allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060509 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060509">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060503"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#melon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Melonenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">melon allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060510 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060510">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060503"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#peach"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Pfirsichallergie</rdfs:label>
+        <rdfs:label xml:lang="en">peach allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060511 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060511">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060503"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#plum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Pflaumenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">plum allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060512 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060512">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0070334"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Tomatenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">tomato allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060513 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060513">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#fish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Fischallergie</rdfs:label>
+        <rdfs:label xml:lang="en">fish allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060514 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060514">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060513"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#atlantic_cod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Kabeljauallergie</rdfs:label>
+        <rdfs:label xml:lang="en">atlantic cod allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060515 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060515">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060513"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#salmon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Lachsallergie</rdfs:label>
+        <rdfs:label xml:lang="en">atlantic salmon allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060516 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060516">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060513"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#carp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Karpfenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">carp allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060517 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060517">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060513"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#zebrafish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Zebrafischallergie</rdfs:label>
+        <rdfs:label xml:lang="en">zebrafish allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060518 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060518">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060513"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#rainbow_trout"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Regenbogenforellenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">rainbow trout allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060521 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060521">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_4376"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#CowMilk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Kuhmilchallergie</rdfs:label>
+        <rdfs:label xml:lang="en">cow milk allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060522 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060522">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_4376"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#goat_milk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Ziegenmilchallergie</rdfs:label>
+        <rdfs:label xml:lang="en">goat milk allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060523 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060523">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060495"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#mollusc"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Weichtierallergie</rdfs:label>
+        <rdfs:label xml:lang="en">mollusc allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060524 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060524">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060495"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#crab"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#crustacean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Krustentierallergie</rdfs:label>
+        <rdfs:label xml:lang="en">crustacean allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060526 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060526">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060524"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Krabbenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">crab allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060530 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060530">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060523"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#snail"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Schneckenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">snail allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0060904 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0060904">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0070334"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Hülsenfruchtallergie</rdfs:label>
+        <rdfs:label xml:lang="en">Legume allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0070334 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0070334">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://knowrob.org/kb/shop.owl#Vegetable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Gemüseallergie</rdfs:label>
+        <rdfs:label xml:lang="en">vegetable allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0070335 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0070335">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0070334"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#celery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Sellerieallergie</rdfs:label>
+        <rdfs:label xml:lang="en">celery allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081005">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#spice_allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#parsley"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Petersielienallergie</rdfs:label>
+        <rdfs:label xml:lang="en">parsley allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_0081006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_0081006">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#spice_allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#dill"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Dillallergie</rdfs:label>
+        <rdfs:label xml:lang="en">dill allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_3660 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_3660">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03315184"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Weizenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">wheat allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4376 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4376">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://knowrob.org/kb/knowrob.owl#milk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Milchallergie</rdfs:label>
+        <rdfs:label xml:lang="en">milk allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4377 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4377">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#egg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Eiallergie</rdfs:label>
+        <rdfs:label xml:lang="en">egg allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4378 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4378">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060904"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#peanut"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Erdnussallergie</rdfs:label>
+        <rdfs:label xml:lang="en">peanut allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_4379 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4379">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#nut"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Nussallergie</rdfs:label>
+        <rdfs:label xml:lang="en">nut allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001093 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001093">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:label xml:lang="de">Getreide</rdfs:label>
+        <rdfs:label xml:lang="en">cereal grain food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001293 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001293">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060495"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Schalentier</rdfs:label>
+        <rdfs:label xml:lang="en">shellfish food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03310306 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310306">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#seeds"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/allergen#sesame_allergy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <rdfs:label xml:lang="en">Sesame seeds</rdfs:label>
+        <rdfs:label xml:lang="de">Sesamsamen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03315184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03315184">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001093"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_3660"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Weizen</rdfs:label>
+        <rdfs:label xml:lang="en">whole wheat kernel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03420177 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420177">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060057"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Gluten</rdfs:label>
+        <rdfs:label xml:lang="en">gluten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Allergen -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Allergen">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q186752"/>
+        <rdfs:label xml:lang="de">Allergen</rdfs:label>
+        <rdfs:label xml:lang="en">allergen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Beta_Hydroxy_Acid -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Beta_Hydroxy_Acid">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kg/allergen#Acid"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#beta_hydroxy_acids_overview"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q223081"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q4897299"/>
+        <rdfs:label xml:lang="en">Beta Hydroxy Acid</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Beta_hydroxy_acid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#ContactAllergen -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#ContactAllergen">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#Allergen"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_cosmetics_website"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">A contact allergen is an ingredient of a product that can cause allergic reactions - most likely skin conditions like contact dermatitis. The ingredients listed in this category are taken from the FDA website (https://www.fda.gov/cosmetics/cosmetic-ingredients/allergens-cosmetics)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Disinfectant -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Disinfectant">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#FoodAllergen -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#FoodAllergen">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#Allergen"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Fragrance -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Fragrance">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#HazardClassification -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#HazardClassification">
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#ECHA_website"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Latex -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Latex">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Metal -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Metal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_cosmetics_website"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q11426"/>
+        <rdfs:label xml:lang="en">Metal</rdfs:label>
+        <rdfs:label xml:lang="de">Metall</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Metal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Mineral_oil -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Mineral_oil">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#mineral_oil_overview"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q72492483"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in CLP notifications this substance is harmful to aquatic life with long lasting effects.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mineral_oil</rdfs:label>
+        <rdfs:label xml:lang="de">Mineralöl</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Mineral_oil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Paraben -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Paraben">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Phthalates -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Phthalates">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Preservative -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Preservative">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Tenside -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Tenside">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Toxin -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Toxin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#ECHA_website"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q184651"/>
+        <rdfs:label xml:lang="de">Giftstoff</rdfs:label>
+        <rdfs:label xml:lang="en">Toxin</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Toxin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#allergy -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#allergy">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Allergie</rdfs:label>
+        <rdfs:label xml:lang="en">allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#sesame_allergy -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#sesame_allergy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310306"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <rdfs:label xml:lang="de">Sesamallergie</rdfs:label>
+        <rdfs:label xml:lang="en">sesame allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#soy_bean_allergy -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#soy_bean_allergy">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060904"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#soy_beans"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <rdfs:label xml:lang="de">Sojabohnenallergie</rdfs:label>
+        <rdfs:label xml:lang="en">soy bean allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#spice_allergy -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#spice_allergy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#allergy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#herb"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Gewürzallergie</rdfs:label>
+        <rdfs:label xml:lang="en">spice allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#tree_nut_allergy -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#tree_nut_allergy">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_4379"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#has_trigger"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#tree_nut"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <rdfs:label xml:lang="de">Baumnussallergie</rdfs:label>
+        <rdfs:label xml:lang="en">tree nut allergy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Bleach/Dye -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/allergen#Bleach/Dye">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#CowMilk -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#CowMilk">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#milk"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060521"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Kuhmilch</rdfs:label>
+        <rdfs:label xml:lang="en">cow milk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#apple -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#apple">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060504"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Apfel</rdfs:label>
+        <rdfs:label xml:lang="en">apple</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#apricot -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#apricot">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Aprikose</rdfs:label>
+        <rdfs:label xml:lang="en">apricot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#atlantic_cod -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#atlantic_cod">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#fish"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060514"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Kabeljau</rdfs:label>
+        <rdfs:label xml:lang="en">atlantic cod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#carp -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#carp">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#fish"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060516"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Karpfen</rdfs:label>
+        <rdfs:label xml:lang="en">carp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#celery -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#celery">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Vegetable"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0070335"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Sellerie</rdfs:label>
+        <rdfs:label xml:lang="en">celery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#cherry -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#cherry">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060506"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Kirsche</rdfs:label>
+        <rdfs:label xml:lang="en">cherry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#chicken_egg -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#chicken_egg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#egg"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060492"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Hühnerei</rdfs:label>
+        <rdfs:label xml:lang="en">chicken egg</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#crab -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#crab">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#crustacean"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060526"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Krabbe</rdfs:label>
+        <rdfs:label xml:lang="en">crab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#crustacean -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#crustacean">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001293"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060524"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Krustentier</rdfs:label>
+        <rdfs:label xml:lang="en">crustacean</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#dill -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#dill">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#herb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0081006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Dill</rdfs:label>
+        <rdfs:label xml:lang="en">dill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#edible_nut -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#edible_nut">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#nut"/>
+        <rdfs:label xml:lang="de">Schalenfrucht</rdfs:label>
+        <rdfs:label xml:lang="en">edible nuts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#egg -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#egg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_4377"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <rdfs:label xml:lang="de">Ei</rdfs:label>
+        <rdfs:label xml:lang="en">egg</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#fish -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#fish">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060513"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <rdfs:label xml:lang="de">Fisch</rdfs:label>
+        <rdfs:label xml:lang="en">fish</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#goat_milk -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#goat_milk">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#milk"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060522"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Ziegenmilch</rdfs:label>
+        <rdfs:label xml:lang="en">goat milk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#herb -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#herb">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/allergen#spice_allergy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Kräuter</rdfs:label>
+        <rdfs:label xml:lang="en">herbs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#legumes -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#legumes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Hülsenfrucht</rdfs:label>
+        <rdfs:label xml:lang="en">legumes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#melon -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#melon">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060509"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Melone</rdfs:label>
+        <rdfs:label xml:lang="en">melon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#mollusc -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#mollusc">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001293"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060523"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Weichtier</rdfs:label>
+        <rdfs:label xml:lang="en">mollusc</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#nut -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#nut">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_4379"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Nuss</rdfs:label>
+        <rdfs:label xml:lang="en">nut</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#orange -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#orange">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060508"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Orange</rdfs:label>
+        <rdfs:label xml:lang="en">orange</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#parsley -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#parsley">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#herb"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0081005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Petersilie</rdfs:label>
+        <rdfs:label xml:lang="en">parsley</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#peach -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#peach">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060510"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Pfirsich</rdfs:label>
+        <rdfs:label xml:lang="en">peach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#peanut -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#peanut">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#legumes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_4378"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Erdnuss</rdfs:label>
+        <rdfs:label xml:lang="en">peanut</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#plum -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#plum">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060511"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Pflaume</rdfs:label>
+        <rdfs:label xml:lang="en">plum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#rainbow_trout -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#rainbow_trout">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#fish"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060518"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Regenbogenforelle</rdfs:label>
+        <rdfs:label xml:lang="en">rainbow trout</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#salmon -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#salmon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#fish"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060515"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Lachs</rdfs:label>
+        <rdfs:label xml:lang="en">salmon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#seeds -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#seeds">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/allergen#FoodAllergen"/>
+        <rdfs:label xml:lang="de">Samen</rdfs:label>
+        <rdfs:label xml:lang="en">Seeds</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#shrimp -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#shrimp">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#crustacean"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0040001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Garnele</rdfs:label>
+        <rdfs:label xml:lang="en">shrimp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#snail -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#snail">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#mollusc"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060530"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Schnecke</rdfs:label>
+        <rdfs:label xml:lang="en">snail</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#soy_beans -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#soy_beans">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#legumes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/allergen#soy_bean_allergy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <rdfs:label xml:lang="de">Sojabohnen</rdfs:label>
+        <rdfs:label xml:lang="en">soy beans</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#tomato -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#tomato">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Vegetable"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060512"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Tomate</rdfs:label>
+        <rdfs:label xml:lang="en">tomato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#tree_nut -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#tree_nut">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#nut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/allergen#tree_nut_allergy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_food_website"/>
+        <rdfs:comment>A tree nut is a nut that grows on a tree, like hazelnut or walnut.</rdfs:comment>
+        <rdfs:label xml:lang="de">Baumnuss</rdfs:label>
+        <rdfs:label xml:lang="en">tree nut</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#zebrafish -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#zebrafish">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#fish"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/allergen#triggers_allergy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_0060517"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology"/>
+        <rdfs:label xml:lang="de">Zebrafisch</rdfs:label>
+        <rdfs:label xml:lang="en">zebrafish</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationEntity -->
+
+    <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#InformationEntity"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kg/allergen#Acid -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kg/allergen#Acid">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#Acid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Alpha-Isomethyl_Ionone -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Alpha-Isomethyl_Ionone">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#alpha_isomethyl_ionone"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32325"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Alpha_Hydroxy_Acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Alpha_Hydroxy_Acid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q413302"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Amyl_cinnamal -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Amyl_cinnamal">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#amyl_cinnamal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Amylcinnamyl_alcohol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Amylcinnamyl_alcohol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17177"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in CLP notifications this substance causes serious eye irritation, may cause an allergic skin reaction and causes skin irritation.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Anionische_Tenside -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Anionische_Tenside">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Tenside"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#anionische_tenside"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q548631"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Anise_alcohol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Anise_alcohol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#anise_alcohol"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in REACH registrations this substance is harmful if swallowed, causes serious eye irritation, causes skin irritation and may cause an allergic skin reaction.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Anisyl_alcohol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Anisyl_alcohol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q548873"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Aqueous_Latex_Adhesive -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Aqueous_Latex_Adhesive">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Latex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Benzalkonium_Chlorid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Benzalkonium_Chlorid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Disinfectant"/>
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Toxin"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#acute_toxicity"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#corrosive"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q55261298"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_3020"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in CLP notifications this substance is fatal if inhaled, is toxic if swallowed, causes severe skin burns and eye damage, is toxic in contact with skin, is very toxic to aquatic life, is very toxic to aquatic life with long lasting effects and causes serious eye damage.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/GHS-pictogram-skull.svg/440px-GHS-pictogram-skull.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Benzyl_alcohol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Benzyl_alcohol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#benzyl_alcohol"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q52353"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17987"/>
+        <rdfs:comment>According to the harmonised classification and labelling (CLP00) approved by the European Union, this substance is harmful if swallowed and is harmful if inhaled.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.drugbank.ca/drugs/DB06770"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Benzyl_benzoate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Benzyl_benzoate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#benzyl_benzoate"/>
+        <owl:sameAs rdf:resource="https://www.drugbank.ca/drugs/DB00676"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q413755"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.bioontology.org/ontology/NDFRT/N0000145990"/>
+        <oboInOwl:hasDbXref rdf:resource="https://www.drugbank.ca/drugs/DB00676"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP01) approved by the European Union, this substance is toxic to aquatic life with long lasting effects and is harmful if swallowed.
+
+Additionally, the classification provided by companies to ECHA in REACH registrations identifies that this substance is very toxic to aquatic life.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_41237"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Benzyl_cinnamate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Benzyl_cinnamate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#benzyl_cinnamate"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q9197460"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in REACH registrations this substance is very toxic to aquatic life, is toxic to aquatic life with long lasting effects and may cause an allergic skin reaction.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_146174"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Benzyl_salicylate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Benzyl_salicylate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#benzyl_salicylate"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q416929"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Beta_hydroxybutanoic_acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Beta_hydroxybutanoic_acid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Beta_Hydroxy_Acid"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q223092"/>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_20067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Bronopol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Bronopol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#corrosive"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q2462902"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_31306"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP01) approved by the European Union, this substance is very toxic to aquatic life, is harmful if swallowed, is harmful in contact with skin, causes serious eye damage, causes skin irritation and may cause respiratory irritation.
+
+Additionally, the classification provided by companies to ECHA in REACH registrations identifies that this substance is toxic to aquatic life with long lasting effects.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.drugbank.ca/r/DB13960"/>
+        <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q71064960"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Butylparaben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Butylparaben">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Paraben"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#butylparaben"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q3302873"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.bioontology.org/ontology/NDFRT/N0000023149"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_88542"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Butylphenyl_Methylpropional -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Butylphenyl_Methylpropional">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#butylphenyl_methylpropional"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q209290"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Caffeine -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Caffeine">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#caffeine"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q60235"/>
+        <rdfs:comment>According to the harmonised classification and labelling (CLP00) approved by the European Union, this substance is harmful if swallowed.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Calamide -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Calamide">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Cera_Microcristallina -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Cera_Microcristallina">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Mineral_oil"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#cera_microcristallina"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q579764"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Ceresin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Ceresin">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Mineral_oil"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q1055000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#ChEBI -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#ChEBI">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <DUL:isRealizedBy>https://www.ebi.ac.uk/chebi</DUL:isRealizedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Cinnamaldehyde -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Cinnamaldehyde">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q204036"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in REACH registrations this substance causes serious eye irritation, is harmful to aquatic life with long lasting effects, is harmful in contact with skin, causes skin irritation and may cause an allergic skin reaction.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16731"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Cinnamyl_alcohol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Cinnamyl_alcohol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#cinnamyl_alcohol"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17177"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Citral -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Citral">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#citral"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q60176530"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23316"/>
+        <rdfs:comment>According to the harmonised classification and labelling (CLP00) approved by the European Union, this substance causes skin irritation and may cause an allergic skin reaction.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Citric_Acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Citric_Acid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#citric_acid"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q159683"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30769"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Citronellol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Citronellol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#citronellol"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q27122080"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50462"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Coal-tar -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Coal-tar">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Bleach/Dye"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q948232"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Cocamide_DEA -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Cocamide_DEA">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q3681908"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Coconut_Diethanolamide -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Coconut_Diethanolamide">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Coconut_oil_acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Coconut_oil_acid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Coumarin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Coumarin">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#coumarin"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q111812"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28794"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#DMDM_hydantoin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#DMDM_hydantoin">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q5205613"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_143246"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Diazolidinyl_urea -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Diazolidinyl_urea">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#diazolidinyl_urea"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_136014"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in REACH registrations this substance causes serious eye irritation.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q67172457"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Dibutylphthalate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Dibutylphthalate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Phthalates"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q415612"/>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_34687"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Diethylphthalate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Diethylphthalate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Phthalates"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_34698"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Dimethylphthalate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Dimethylphthalate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Phthalates"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q423551"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_4609"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Disinfectant -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Disinfectant">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#Disinfectant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#ECHA_website -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#ECHA_website">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <DUL:isRealizedBy>https://www.echa.europa.eu/web</DUL:isRealizedBy>
+        <rdfs:comment>ECHA = European Chemicals Agency</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Ethylhexyl_Stearate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Ethylhexyl_Stearate">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#ethylhexyl_stearate"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q27277167"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Ethylparaben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Ethylparaben">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Paraben"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#ethylparaben"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q229976"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_31575"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Eugenol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Eugenol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#eugenol"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q423357"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_4917"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in REACH registrations this substance may be fatal if swallowed and enters airways, causes serious eye irritation, may cause an allergic skin reaction and causes skin irritation.
+
+At least one company has indicated that the substance classification is affected by impurities or additives.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Evernia_Furfuracea_Extract -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Evernia_Furfuracea_Extract">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Evernia_Prunastri_Extract -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Evernia_Prunastri_Extract">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#evernia_prunastri_extract"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in REACH registrations this substance causes serious eye irritation, causes skin irritation and may cause an allergic skin reaction.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#FDA_cosmetics_website -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#FDA_cosmetics_website">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <DUL:isRealizedBy>https://www.fda.gov/cosmetics/cosmetic-ingredients/allergens-cosmetics</DUL:isRealizedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#FDA_food_website -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#FDA_food_website">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <DUL:isRealizedBy>https://www.fda.gov/food/food-labeling-nutrition/food-allergies</DUL:isRealizedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Farnesol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Farnesol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#farnesol"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q60194891"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28600"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in REACH registrations this substance is very toxic to aquatic life, is very toxic to aquatic life with long lasting effects, causes skin irritation and may cause an allergic skin reaction.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Formaldehyde -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Formaldehyde">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q161210"/>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16842"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Fragrance -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Fragrance">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#Fragrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Geraniol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Geraniol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#geraniol"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q410836"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17447"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP15) approved by the European Union, this substance may cause an allergic skin reaction.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Glutaral -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Glutaral">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Toxin"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#glutaral"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#acute_toxicity"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#corrosive"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q416475"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64276"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP09) approved by the European Union, this substance is fatal if inhaled, is toxic if swallowed, causes severe skin burns and eye damage, is very toxic to aquatic life, is toxic to aquatic life with long lasting effects, may cause an allergic skin reaction, may cause allergy or asthma symptoms or breathing difficulties if inhaled and may cause respiratory irritation.
+
+Additionally, the classification provided by companies to ECHA in REACH registrations identifies that this substance causes serious eye damage.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/GHS-pictogram-skull.svg/440px-GHS-pictogram-skull.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Glycerin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Glycerin">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#glycerin"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q132501"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Gold -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Gold">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Metal"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q897"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Hexyl_cinnamal -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Hexyl_cinnamal">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#hexyl_cinnamal"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in REACH registrations this substance is very toxic to aquatic life, is toxic to aquatic life with long lasting effects and may cause an allergic skin reaction.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Hexyl_cinnamaladehyde -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Hexyl_cinnamaladehyde">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#HumanDiseaseOntology">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <DUL:isRealizedBy>https://obofoundry.org/ontology/doid.html</DUL:isRealizedBy>
+        <rdfs:label xml:lang="de">Human Disease Ontology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Hydrogenated_Castor_Oil -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Hydrogenated_Castor_Oil">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#hydrogenated_castor_oil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Hydroxycitronellal -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Hydroxycitronellal">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#hydroxycitronellal"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q25100775"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_53459"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Hydroxyisohexyl_3-cyclohexene_carboxaldehyde -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Hydroxyisohexyl_3-cyclohexene_carboxaldehyde">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#hydroxyisohexyl_"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q5955634"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Imidazolidinyl_urea -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Imidazolidinyl_urea">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#imidazolidinyl_urea"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q2737856"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_51805"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Isoeugenol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Isoeugenol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#isoeugenol"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q420043"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18224"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP13) approved by the European Union, this substance may cause an allergic skin reaction</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Isopropyl_Palmitate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Isopropyl_Palmitate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#isopropyl_palmitate"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q2631777"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Kationische_Tenside -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Kationische_Tenside">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Tenside"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q1736599"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Latex -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Latex">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Latex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Latex_Rubber -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Latex_Rubber">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Latex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Lilial -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Lilial">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q209290"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP15) approved by the European Union, this substance may damage fertility and is suspected of damaging the unborn child.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Limonene -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Limonene">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#limonene"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q27089405"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Linalool -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Linalool">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q410932"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17580"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Lyral -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Lyral">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP09) approved by the European Union, this substance may cause an allergic skin reaction.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q61068145"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Magnesium_Sulfate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Magnesium_Sulfate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#magnesium_sulfate"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q288266"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Maltodextrin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Maltodextrin">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#maltodextrin"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q74691702"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Methyl_2-octynoate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Methyl_2-octynoate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Methylchloroisothiazolinone -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Methylchloroisothiazolinone">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#methylisothiazolinone"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q204121"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_53621"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Methylheptincarbonat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Methylheptincarbonat">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Methylisothiazolinone -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Methylisothiazolinone">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#acute_toxicity"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#corrosive"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q423870"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_53620"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP13) approved by the European Union, this substance is fatal if inhaled, is toxic if swallowed, is toxic in contact with skin, causes severe skin burns and eye damage, is very toxic to aquatic life, is very toxic to aquatic life with long lasting effects, causes serious eye damage and may cause an allergic skin reaction.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/GHS-pictogram-skull.svg/440px-GHS-pictogram-skull.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Methylparaben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Methylparaben">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Paraben"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#methylparaben"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q229987"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_31835"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Microcrystalline_Wax -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Microcrystalline_Wax">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Mineral_oil"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#microcrystalline_wax"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q579764"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Myroxylon -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Myroxylon">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in CLP notifications this substance is toxic to aquatic life with long lasting effects, is harmful if swallowed and may cause an allergic skin reaction.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Natriumhypochlorid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Natriumhypochlorid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Bleach/Dye"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#corrosive"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP13) approved by the European Union, this substance causes severe skin burns and eye damage, is very toxic to aquatic life, is very toxic to aquatic life with long lasting effects and causes serious eye damage. 
+
+Additionally, the classification provided by companies to ECHA in REACH registrations identifies that this substance may be corrosive to metals, causes skin irritation and may cause respiratory irritation.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Natriumperborat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Natriumperborat">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Bleach/Dye"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#acute_toxicity"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#corrosive"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#oxidising"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q415507"/>
+        <rdfs:comment>According to the classification provided by companies to ECHA in CLP notifications this substance may damage fertility or the unborn child, is toxic if inhaled, causes serious eye damage, may intensify fire (oxidiser), is harmful if swallowed and may cause respiratory irritation.
+
+This substance is covered by several Harmonised Classifications and Labelling&apos;s (CLH) entries approved by the European Union. Differentiating between the different CLH&apos;s entries requires manual verification. To know more about the CLH please visit the C&amp;L Inventory.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/GHS-pictogram-skull.svg/440px-GHS-pictogram-skull.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Hazard_O.svg/440px-Hazard_O.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Natriumpercarbonat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Natriumpercarbonat">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Bleach/Dye"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#corrosive"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#flammable"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q420070"/>
+        <rdfs:comment>According to the harmonised classification and labelling (CLP00) approved by the European Union, this substance causes severe skin burns and eye damage, is very toxic to aquatic life, is a flammable liquid and vapour, is harmful if swallowed, is harmful in contact with skin, is harmful if inhaled and if heated may cause a fire.
+
+Additionally, the classification provided by companies to ECHA in REACH registrations identifies that this substance is toxic if swallowed, is toxic if inhaled, is very toxic to aquatic life with long lasting effects, causes serious eye damage and may cause respiratory irritation.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+        <foaf:depiction rdf:resource="https://www.keysigns.co.uk/images/flammable-warning-safety-signs-p1612-54774_zoom.jpg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Natural_Centrifuged_Latex -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Natural_Centrifuged_Latex">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Latex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Natural_Latex -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Natural_Latex">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Latex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Natural_Latex_Rubber -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Natural_Latex_Rubber">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Latex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Natural_Liquid_Latex -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Natural_Liquid_Latex">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Latex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Natural_Rubber_Latex -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Natural_Rubber_Latex">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Latex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Nichtionische_Tenside -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Nichtionische_Tenside">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Tenside"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q1668147"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Nickel -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Nickel">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Metal"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q744"/>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28112"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Ninol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Ninol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Oak_moss_extract -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Oak_moss_extract">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Ozokerit -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Ozokerit">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Mineral_oil"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q909924"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Paraben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Paraben">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#Paraben"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Paraffinum_Liquidum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Paraffinum_Liquidum">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Mineral_oil"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#paraffinum_liquidum"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q6557471"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Paraffinum_Subliquidum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Paraffinum_Subliquidum">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Mineral_oil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Parahydroxybenzoic -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Parahydroxybenzoic">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Parfum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Parfum">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/allergen#parfum"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#parfum"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q131746"/>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Perfume"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Petrolatum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Petrolatum">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Mineral_oil"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q457239"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Phenoxyethanol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Phenoxyethanol">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#phenoxyethanol"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q418038"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64275"/>
+        <rdfs:comment>According to the harmonised classification and labelling (CLP00) approved by the European Union, this substance is harmful if swallowed and causes serious eye irritation.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Phthalate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Phthalate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Phthalates"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q407650"/>
+        <rdfs:label xml:lang="de">Phtalat</rdfs:label>
+        <rdfs:label xml:lang="en">Phtalate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Phthalates -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Phthalates">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Phthalates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Preservative -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Preservative">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#Preservative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Propylparaben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Propylparaben">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Paraben"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#propylparaben"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q511627"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32063"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Quaternium-15 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Quaternium-15">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#flammable"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q7269571"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59607"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP01) approved by the European Union, this substance is toxic to aquatic life with long lasting effects, is a flammable solid, is harmful if swallowed, is suspected of damaging the unborn child, causes skin irritation and may cause an allergic skin reaction.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+        <foaf:depiction rdf:resource="https://www.keysigns.co.uk/images/flammable-warning-safety-signs-p1612-54774_zoom.jpg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Rubber -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Rubber">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Rubber_Latex -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Rubber_Latex">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Latex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Salicylate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Salicylate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Beta_Hydroxy_Acid"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/allergen#Salicylic_acid"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q193572"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30762"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Salicylic_acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Salicylic_acid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Beta_Hydroxy_Acid"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#salicylic_acid"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#corrosive"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16914"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP13) approved by the European Union, this substance is harmful if swallowed, causes serious eye damage and is suspected of damaging the unborn child.
+
+Additionally, the classification provided by companies to ECHA in REACH registrations identifies that this substance is suspected of damaging fertility or the unborn child.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Sodium_Chloride -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Sodium_Chloride">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#sodium_chloride"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q2314"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Sodium_Lauryl_Sulfate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Sodium_Lauryl_Sulfate">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#sodium_lauryl_sulfate"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q422241"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Sodium_hydroxymethylglycinate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Sodium_hydroxymethylglycinate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q27276411"/>
+        <rdfs:comment>According to the harmonised classification and labelling (ATP15) approved by the European Union, this substance may cause cancer, is harmful if swallowed, causes serious eye irritation, is harmful if inhaled, is suspected of causing genetic defects, causes skin irritation, may cause an allergic skin reaction and may cause respiratory irritation.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Sodium_salicylate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Sodium_salicylate">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Beta_Hydroxy_Acid"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#sodium_salicylate"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q414547"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_9180"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#StringMatching -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#StringMatching">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Subtilisin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Subtilisin">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Toxin"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#subtilisin"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#corrosive"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#health_hazard"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q423655"/>
+        <rdfs:comment>According to the harmonised classification and labelling (CLP00) approved by the European Union, this substance causes serious eye damage, causes skin irritation, may cause allergy or asthma symptoms or breathing difficulties if inhaled and may cause respiratory irritation.
+
+Additionally, the classification provided by companies to ECHA in REACH registrations identifies that this substance is very toxic to aquatic life, is toxic to aquatic life with long lasting effects and is harmful if swallowed.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Talc -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Talc">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#talc"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q134583"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Tenside -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Tenside">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#Surfactant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Tree_moss_extract -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Tree_moss_extract">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Trethocanic_acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Trethocanic_acid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Beta_Hydroxy_Acid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Tropic_acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Tropic_acid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Beta_Hydroxy_Acid"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q72515608"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30765"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Vaseline -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Vaseline">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Mineral_oil"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q185120"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Wasserstoffperoxid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Wasserstoffperoxid">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Bleach/Dye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Willow_extract -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Willow_extract">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Beta_Hydroxy_Acid"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_79395"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Witcamide -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Witcamide">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#ContactAllergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Xanthan_Gum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Xanthan_Gum">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#xanthan_gum"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q410768"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#acute_toxicity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#acute_toxicity">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#HazardClassification"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q51843956"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/GHS-pictogram-skull.svg/440px-GHS-pictogram-skull.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#beta_hydroxy_acids_overview -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#beta_hydroxy_acids_overview">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <DUL:isRealizedBy>https://www.fda.gov/cosmetics/cosmetic-ingredients/beta-hydroxy-acids</DUL:isRealizedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#corrosive -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#corrosive">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#HazardClassification"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q51843949"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GHS-pictogram-acid.svg/440px-GHS-pictogram-acid.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#d-Limonene -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#d-Limonene">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#limonene"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q27888324"/>
+        <rdfs:seeAlso rdf:resource="https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL449062"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#flammable -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#flammable">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#HazardClassification"/>
+        <foaf:depiction rdf:resource="https://www.keysigns.co.uk/images/flammable-warning-safety-signs-p1612-54774_zoom.jpg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#g-Methylionone -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#g-Methylionone">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Fragrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#HazardClassification"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q51843973"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#health_hazard -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#health_hazard">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#HazardClassification"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q51843962"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#latex_overview -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#latex_overview">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <DUL:isRealizedBy>https://www.fda.gov/cosmetics/cosmetic-ingredients/latex-cosmetics</DUL:isRealizedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#mineral_oil_overview -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#mineral_oil_overview">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <DUL:isRealizedBy>https://inside-our-products.loreal.com/ingredients/minerals-oils</DUL:isRealizedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#oxidising -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#oxidising">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#HazardClassification"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q187689"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Hazard_O.svg/440px-Hazard_O.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#p-phenylenediamine -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#p-phenylenediamine">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Bleach/Dye"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#acute_toxicity"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#hazardous_to_the_environment"/>
+        <allergen:has_depiction rdf:resource="http://purl.org/NonFoodKG/allergen#serious_health_hazard"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q415024"/>
+        <rdfs:comment>According to the harmonised classification and labelling (CLP00) approved by the European Union, this substance is toxic if swallowed, is toxic in contact with skin, is toxic if inhaled, is very toxic to aquatic life, is very toxic to aquatic life with long lasting effects, causes serious eye irritation and may cause an allergic skin reaction.
+
+Additionally, the classification provided by companies to ECHA in REACH registrations identifies that this substance causes damage to organs.</rdfs:comment>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/GHS-pictogram-skull.svg/440px-GHS-pictogram-skull.svg.png"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/GHS-pictogram-pollu.svg/440px-GHS-pictogram-pollu.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#parfum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#parfum">
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Perfume"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#serious_health_hazard -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#serious_health_hazard">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#HazardClassification"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q51843964"/>
+        <foaf:depiction rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/GHS-pictogram-silhouette.svg/440px-GHS-pictogram-silhouette.svg.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#5-bromo-5-nitro-1,3-dioxane -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#5-bromo-5-nitro-1,3-dioxane">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/allergen#Preservative"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q4973879"/>
+        <owl:sameAs rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">bronidox</owl:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/allergen#Bleach/Dye -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/allergen#Bleach/Dye">
+        <owl:sameAs rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#Bleach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#Acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#Acid"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#Bleach -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#Bleach"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#Disinfectant -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#Disinfectant"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#Fragrance -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#Fragrance"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#Paraben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#Paraben"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#Preservative -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#Preservative"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#Surfactant -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#Surfactant"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#alpha_isomethyl_ionone -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#alpha_isomethyl_ionone"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#amyl_cinnamal -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#amyl_cinnamal"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#anionische_tenside -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#anionische_tenside"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#anise_alcohol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#anise_alcohol"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#benzyl_alcohol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#benzyl_alcohol"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#benzyl_benzoate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#benzyl_benzoate"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#benzyl_cinnamate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#benzyl_cinnamate"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#benzyl_salicylate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#benzyl_salicylate"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#butylparaben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#butylparaben"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#butylphenyl_methylpropional -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#butylphenyl_methylpropional"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#caffeine -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#caffeine"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#cera_microcristallina -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#cera_microcristallina"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#cinnamyl_alcohol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#cinnamyl_alcohol"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#citral -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#citral"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#citric_acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#citric_acid"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#citronellol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#citronellol"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#coumarin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#coumarin"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#diazolidinyl_urea -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#diazolidinyl_urea"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#ethylhexyl_stearate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#ethylhexyl_stearate"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#ethylparaben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#ethylparaben"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#eugenol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#eugenol"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#evernia_prunastri_extract -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#evernia_prunastri_extract"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#farnesol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#farnesol"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#geraniol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#geraniol"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#glutaral -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#glutaral"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#glycerin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#glycerin"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#hexyl_cinnamal -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#hexyl_cinnamal"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#hydrogenated_castor_oil -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#hydrogenated_castor_oil"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#hydroxycitronellal -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#hydroxycitronellal"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#hydroxyisohexyl_ -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#hydroxyisohexyl_"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#imidazolidinyl_urea -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#imidazolidinyl_urea"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#isoeugenol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#isoeugenol"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#isopropyl_palmitate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#isopropyl_palmitate"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#limonene -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#limonene"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#magnesium_sulfate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#magnesium_sulfate"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#maltodextrin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#maltodextrin"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#methylisothiazolinone -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#methylisothiazolinone"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#methylparaben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#methylparaben"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#microcrystalline_wax -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#microcrystalline_wax"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#paraffinum_liquidum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#paraffinum_liquidum"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#parfum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#parfum"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#phenoxyethanol -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#phenoxyethanol"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#propylparaben -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#propylparaben"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#salicylic_acid -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#salicylic_acid"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#sodium_chloride -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#sodium_chloride"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#sodium_lauryl_sulfate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#sodium_lauryl_sulfate"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#sodium_salicylate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#sodium_salicylate"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#subtilisin -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#subtilisin"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#talc -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#talc"/>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/nonfoodingredients#xanthan_gum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#xanthan_gum"/>
+    
+
+
+    <!-- https://www.drugbank.ca/drugs/DB00676 -->
+
+    <owl:NamedIndividual rdf:about="https://www.drugbank.ca/drugs/DB00676"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://knowrob.org/kg/allergen#Acid">
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Acid"/>
+        <rdfs:label xml:lang="en">Acid</rdfs:label>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q11158"/>
+        <rdfs:label xml:lang="de">Säure</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/NonFoodKG/allergen#Disinfectant">
+        <rdfs:label xml:lang="en">Disinfectant</rdfs:label>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q73984"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#ChEBI"/>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Disinfectant"/>
+        <rdfs:label xml:lang="de">Desinfektionsmittel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/NonFoodKG/allergen#Fragrance">
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_48318"/>
+        <rdfs:label xml:lang="en">Fragrance</rdfs:label>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_cosmetics_website"/>
+        <rdfs:label xml:lang="de">Duftstoff</rdfs:label>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q2151963"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/NonFoodKG/allergen#Latex">
+        <rdfs:label xml:lang="en">Latex</rdfs:label>
+        <rdfs:label xml:lang="de">Latex</rdfs:label>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#latex_overview"/>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Latex"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q244680"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/NonFoodKG/allergen#Paraben">
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Paraben"/>
+        <rdfs:label xml:lang="de">Paraben</rdfs:label>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#StringMatching"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q410780"/>
+        <rdfs:label xml:lang="en">Paraben</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/NonFoodKG/allergen#Phthalates">
+        <rdfs:label xml:lang="en">Phthalate</rdfs:label>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q407650"/>
+        <rdfs:label xml:lang="de">Phthalate</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Phthalate"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#StringMatching"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/NonFoodKG/allergen#Preservative">
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Preservative"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_cosmetics_website"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q274579"/>
+        <rdfs:label xml:lang="en">Preservative</rdfs:label>
+        <rdfs:label xml:lang="de">Konservierungsmittel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/NonFoodKG/allergen#Tenside">
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#StringMatching"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q191154"/>
+        <rdfs:label xml:lang="en">Surfactant</rdfs:label>
+        <rdfs:label xml:lang="de">Tensid</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Surfactant"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/NonFoodKG/allergen#Bleach/Dye">
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q11587"/>
+        <trust:source rdf:resource="http://purl.org/NonFoodKG/allergen#FDA_cosmetics_website"/>
+        <rdfs:label xml:lang="de">Bleichmittel/ Färbemittel</rdfs:label>
+        <rdfs:label xml:lang="en">Bleach/ Dye</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Bleach"/>
+        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q189720"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

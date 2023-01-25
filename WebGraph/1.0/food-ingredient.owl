@@ -1,0 +1,2221 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/karin/ontologies/2022/8/untitled-ontology-31#"
+     xml:base="http://www.semanticweb.org/karin/ontologies/2022/8/untitled-ontology-31"
+     xmlns:gr="http://purl.org/goodrelations/v1#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Spec="https://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:term="http://purl.org/dc/terms/"
+     xmlns:trust="http://purl.org/NonFoodKG/trust#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.org/NonFoodKG/foodingredient">
+        <owl:versionIRI rdf:resource="http://purl.org/NonFoodKG/foodingredient/1.0"/>
+        <term:contributor>Michaela Kümpel, Karin Doberstein</term:contributor>
+        <term:license>https://opendatacommons.org/licenses/by/1-0/</term:license>
+        <rdfs:comment>Food ingredients for example products that are available at the kitchen laboratory at the Institute for Artificial Intelligence, University of Bremen.</rdfs:comment>
+        <Spec:copyright>Copyright (c) 2021 Michaela Kümpel
+
+This work is licensed under Open Data Commons Attribution License (ODC-BY 1.0 license).
+
+You are free:
+
+    To share: To copy, distribute and use the database.
+    To create: To produce works from the database.
+    To adapt: To modify, transform and build upon the database.
+
+As long as you:
+
+    Attribute: Attribute the work to the original authors. You must attribute any public use of the database, or works produced from the database. For any use or redistribution of the database, or works produced from it, you must make clear to others the license of the database and keep intact any notices on the original database.</Spec:copyright>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright -->
+
+    <owl:AnnotationProperty rdf:about="https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/NonFoodKG/foodingredient#has_ingredient -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/foodingredient#has_ingredient">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label xml:lang="de">has_ingredient</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/foodingredient#has_trace -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/foodingredient#has_trace">
+        <rdfs:label xml:lang="de">has_trace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#hasEAN_UCC-13 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/goodrelations/v1#hasEAN_UCC-13"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#AlbiHimbeerJuice -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/iai-kitchen.owl#AlbiHimbeerJuice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#juice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#apple_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#ascorbic_acid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#chokeberry_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#citric_acid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#glucose_fructose_sirup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#passionfruit_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#rasberry_puree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sugar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">albi Himbeer-Maracuja</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#ButterMilchErdbeere -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/iai-kitchen.owl#ButterMilchErdbeere">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Buttermilk"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://knowrob.org/kb/knowrob.owl#Buttermilk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#beetroot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#flavor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#glucose_fructose_sirup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#strawberry_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#strawberry_puree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sugar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Müller Buttermilch Erdbeere</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#HelaCurryKetchup -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/iai-kitchen.owl#HelaCurryKetchup">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Ketchup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#brandy_vinegar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#carob_gum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#celery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#citric_acid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#cooking_salt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#curry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#dextrose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#guar_gum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#modified_corn_starch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#mononatriumglutamat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#natriumlactat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sugar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#tomato_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Curry Gewürz Ketchup delikat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#KoelnMuesliSchokoKeks -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/iai-kitchen.owl#KoelnMuesliSchokoKeks">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#cereal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301116"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#baking_agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#barley_malt_syrup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#butter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#cacao_butter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#calcium_carbonate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#citric_acid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#cocoa_mass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#flavor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#glucose_fructose_sirup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sonnenblumen-lecithine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sugar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#süßmolkepulver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#table_salt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#vegetable_oil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#wheat_starch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#whole_milk_powder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#wholegrain_oat_flour"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#wholegrain_oats"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#wholegrain_wheatflakes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#yeast"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_trace"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/foodingredient#edible_nut"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Knusper Sckoko &amp; Keks</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#MeerSalz -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/iai-kitchen.owl#MeerSalz">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#spice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#MondaminPancakeMix -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/iai-kitchen.owl#MondaminPancakeMix">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#PancakeMix"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301116"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#dried_egg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#fructose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#glucose_sirup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#iodized_table_salt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#yolk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_trace"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/foodingredient#milk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Mondamin Pfannkuchen Mix</rdfs:label>
+        <rdfs:label xml:lang="en">Mondamin pancake mix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#TomatoAlGustoBasilikum -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/iai-kitchen.owl#TomatoAlGustoBasilikum">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#TomatoBasedSauce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#basil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#extra_virgin_olive_oil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#fructose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#modified_starch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#pepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#table_salt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#L(+)-tartaric_acid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Tomato al Gusto Basilikum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#TomatoAlGustoKraeuter -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/iai-kitchen.owl#TomatoAlGustoKraeuter">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#TomatoBasedSauce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#basil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#extra_virgin_olive_oil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#garlic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#modified_starch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#onion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#oregano"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#parsley"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#pepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sugar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#table_salt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#thyme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#L(+)-tartaric_acid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_trace"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/foodingredient#milk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_trace"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#CerealGrainWithGluten"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_trace"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#celery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_trace"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#egg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Tomato al Gusto Kräuter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#VollMilch -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/iai-kitchen.owl#VollMilch">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#CowsMilk-Product"/>
+        <rdfs:label xml:lang="en">Full-cream milk</rdfs:label>
+        <rdfs:label xml:lang="de">Vollmilch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#Buttermilk -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#Buttermilk">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#CowsMilk-Product"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#beverage"/>
+        <rdfs:label xml:lang="de">Buttermilch</rdfs:label>
+        <rdfs:label xml:lang="en">Buttermilk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#CowsMilk-Product -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#CowsMilk-Product">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#milk_product"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#CowMilk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Cows milk product</rdfs:label>
+        <rdfs:label xml:lang="de">Kuhmilchprodukt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#Juice -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#Juice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="en">Juice</rdfs:label>
+        <rdfs:label xml:lang="de">Saft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#Ketchup -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#Ketchup">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#TomatoBasedSauce"/>
+        <rdfs:label xml:lang="de">Ketchup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#PancakeMix -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#PancakeMix">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+        <rdfs:label xml:lang="en">Pancake mix</rdfs:label>
+        <rdfs:label xml:lang="de">Pfannkuchen Mix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#Rice -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#Rice">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001093"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#TomatoBasedSauce -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#TomatoBasedSauce">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+        <rdfs:label xml:lang="de">Tomatensauce</rdfs:label>
+        <rdfs:label xml:lang="en">Tomato based sauce</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/shop.owl#Fruit -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/shop.owl#Fruit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="en">Fruit</rdfs:label>
+        <rdfs:label xml:lang="de">Obst</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/shop.owl#Vegetable -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/shop.owl#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="de">Gemüse</rdfs:label>
+        <rdfs:label xml:lang="en">Vegetable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001002">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#product"/>
+        <rdfs:label xml:lang="en">food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001093 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001093">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="de">Getreide</rdfs:label>
+        <rdfs:label xml:lang="en">Grain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03301116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301116">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03315184"/>
+        <rdfs:label xml:lang="de">Weizenmehl</rdfs:label>
+        <rdfs:label xml:lang="en">Wheat flour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03310306 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310306">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#seeds"/>
+        <rdfs:label xml:lang="de">Sesamsamen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03315184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03315184">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#CerealGrainWithGluten"/>
+        <rdfs:label xml:lang="de">Weizen</rdfs:label>
+        <rdfs:label xml:lang="en">Wheat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/foodingredient#edible_nut -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/foodingredient#edible_nut">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#nut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/foodingredient#ingredient -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/foodingredient#ingredient">
+        <rdfs:label xml:lang="en">Ingredient</rdfs:label>
+        <rdfs:label xml:lang="de">Inhaltsstoff</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/foodingredient#milk -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/foodingredient#milk">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#CowsMilk-Product"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#CowMilk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/foodingredient#product -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/foodingredient#product">
+        <rdfs:label xml:lang="en">Product</rdfs:label>
+        <rdfs:label xml:lang="de">Produkt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/foodingredient#vitamin -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/foodingredient#vitamin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="de">Vitamin</rdfs:label>
+        <rdfs:label xml:lang="en">Vitamin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#Acidifier -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#Acidifier">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="en">Acidifier</rdfs:label>
+        <rdfs:label xml:lang="de">Säuerungsmittel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#CerealGrainWithGluten -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#CerealGrainWithGluten">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001093"/>
+        <rdfs:comment xml:lang="en">Cereal grain containing Gluten</rdfs:comment>
+        <rdfs:label xml:lang="de">Glutenhaltiges Getreide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#CowMilk -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#CowMilk">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#CowsMilk-Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#HohesCMilderMultivitamin -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#HohesCMilderMultivitamin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#juice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/foodingredient#vitamin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#acerola_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#apple_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#banana_pulp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#lemon_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#mango_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#orange_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">hohe C Milder Multivitamin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#MIlchreisApfel -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#MIlchreisApfel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#milk_rice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://knowrob.org/kb/iai-kitchen.owl#VollMilch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://knowrob.org/kb/knowrob.owl#Buttermilk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#Traubenzucker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#apple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#apple_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#carob_gum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#flavor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#guar_gum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#lemon_juice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sugar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#table_salt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#whole_egg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Müller Milchreis Apfel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#Starch -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#Starch">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="en">Starch</rdfs:label>
+        <rdfs:label xml:lang="de">Stärke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#Traubenzucker -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#Traubenzucker">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sweetener"/>
+        <rdfs:label xml:lang="de">Traubenzucker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#WholeWheatFlour -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#WholeWheatFlour">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03315184"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#acerola -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#acerola">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="de">Acerola</rdfs:label>
+        <rdfs:label xml:lang="en">Acerola</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#acerola_juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#acerola_juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Juice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#acerola"/>
+        <rdfs:comment xml:lang="en">Acerola juice</rdfs:comment>
+        <rdfs:label xml:lang="de">Acerolasaft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#acidity_regulator -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#acidity_regulator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="de">Säureregulator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#additive -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#additive">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="en">Additive</rdfs:label>
+        <rdfs:label xml:lang="de">Zusatzstoff</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#antioxidant -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#antioxidant">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="de">Antioxidationsmittel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#apple -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#apple">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="de">Apfel</rdfs:label>
+        <rdfs:label xml:lang="en">Apple</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#apple_juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#apple_juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Juice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#apple"/>
+        <rdfs:comment xml:lang="en">Apple juice</rdfs:comment>
+        <rdfs:label xml:lang="de">Apfelsaft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#ascorbic_acid -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#ascorbic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#antioxidant"/>
+        <rdfs:label xml:lang="en">Ascorbic acid</rdfs:label>
+        <rdfs:label xml:lang="de">Ascorbinsäure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#baking_agent -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#baking_agent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="de">Backtriebmittel</rdfs:label>
+        <rdfs:label xml:lang="en">Baking agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#banana -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#banana">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="en">Banana</rdfs:label>
+        <rdfs:label xml:lang="de">Banane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#banana_pulp -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#banana_pulp">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#banana"/>
+        <rdfs:label xml:lang="en">Banana pulp</rdfs:label>
+        <rdfs:label xml:lang="de">Bananenmark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#barley_malt_syrup -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#barley_malt_syrup">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#dough_conditioner"/>
+        <rdfs:label xml:lang="de">Gerstenmalzextrakt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#basil -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#basil">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#herb"/>
+        <rdfs:label xml:lang="en">Basil</rdfs:label>
+        <rdfs:label xml:lang="de">Basilikum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#beetroot -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#beetroot">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#dye"/>
+        <rdfs:label xml:lang="en">Beetroot</rdfs:label>
+        <rdfs:label xml:lang="de">Rote Bete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#beverage -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#beverage">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#product"/>
+        <rdfs:label xml:lang="de">Getränk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#brandy_vinegar -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#brandy_vinegar">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#vinegar"/>
+        <rdfs:label xml:lang="en">Brandy vinegar</rdfs:label>
+        <rdfs:label xml:lang="de">Branntweinessig</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#bread -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#bread">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#butter -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#butter">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#CowsMilk-Product"/>
+        <rdfs:label xml:lang="de">Butter</rdfs:label>
+        <rdfs:label xml:lang="en">Butter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#cacao_butter -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#cacao_butter">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#cocoa"/>
+        <rdfs:label xml:lang="en">Cacao butter</rdfs:label>
+        <rdfs:label xml:lang="de">Kakaobutter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#calcium_carbonate -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#calcium_carbonate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#acidity_regulator"/>
+        <rdfs:label xml:lang="en">Calcium carbonate</rdfs:label>
+        <rdfs:label xml:lang="de">Calciumcarbonat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#canola_oil -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#canola_oil">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#vegetable_oil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#carob_gum -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#carob_gum">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#thickener"/>
+        <rdfs:label xml:lang="en">Carob gum</rdfs:label>
+        <rdfs:label xml:lang="de">Johannisbrotkernmehl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#celery -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#celery">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Vegetable"/>
+        <rdfs:label xml:lang="en">Celery</rdfs:label>
+        <rdfs:label xml:lang="de">Sellerie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#cereal -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#cereal">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+        <rdfs:label xml:lang="de">Müsli</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#chicken_egg -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#chicken_egg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#egg"/>
+        <rdfs:label xml:lang="en">Chicken egg</rdfs:label>
+        <rdfs:label xml:lang="de">Hühnerei</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#chokeberry -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#chokeberry">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="de">Aronia</rdfs:label>
+        <rdfs:label xml:lang="en">Chokeberry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#chokeberry_juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#chokeberry_juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Juice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#chokeberry"/>
+        <rdfs:label xml:lang="de">Aroniasaft</rdfs:label>
+        <rdfs:label xml:lang="en">Chokeberry juice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#citric_acid -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#citric_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#Acidifier"/>
+        <rdfs:label xml:lang="en">Citric acid</rdfs:label>
+        <rdfs:label xml:lang="de">Zitronensäure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#cocoa -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#cocoa">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="en">Cocoa</rdfs:label>
+        <rdfs:label xml:lang="de">Kakao</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#cocoa_mass -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#cocoa_mass">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#cocoa"/>
+        <rdfs:label xml:lang="en">Cocoa mass</rdfs:label>
+        <rdfs:label xml:lang="de">Kakaomasse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#cooking_salt -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#cooking_salt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#spice"/>
+        <rdfs:label xml:lang="en">Cooking salt</rdfs:label>
+        <rdfs:label xml:lang="de">Kochsalz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#curry -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#curry">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#spice"/>
+        <rdfs:label xml:lang="de">Curry</rdfs:label>
+        <rdfs:label xml:lang="en">Curry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#dextrose -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#dextrose">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sweetener"/>
+        <rdfs:label xml:lang="de">Dextrose</rdfs:label>
+        <rdfs:label xml:lang="en">Dextrose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#dough_conditioner -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#dough_conditioner">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="de">Backmittel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#dried_egg -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#dried_egg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#chicken_egg"/>
+        <rdfs:label xml:lang="en">Dired egg</rdfs:label>
+        <rdfs:label xml:lang="de">Eipulver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#dye -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#dye">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="en">Dye</rdfs:label>
+        <rdfs:label xml:lang="de">Farbstoff</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#egg -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#egg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#emulgator -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#emulgator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="de">Emulgator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#extra_virgin_olive_oil -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#extra_virgin_olive_oil">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#vegetable_oil"/>
+        <rdfs:label xml:lang="en">Extra virgin olive oil</rdfs:label>
+        <rdfs:label xml:lang="de">Natives Olivenöl extra</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#flavor -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#flavor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="de">Aroma</rdfs:label>
+        <rdfs:label xml:lang="en">Flavor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#flavor_enhancer -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#flavor_enhancer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="de">Geschmacksverstärker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#fructose -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#fructose">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sweetener"/>
+        <rdfs:comment xml:lang="en">Fructose</rdfs:comment>
+        <rdfs:label xml:lang="de">Fruktose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#garlic -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#garlic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#spice"/>
+        <rdfs:label xml:lang="en">Garlic</rdfs:label>
+        <rdfs:label xml:lang="de">Knoblauch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#glucose_fructose_sirup -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#glucose_fructose_sirup">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sweetener"/>
+        <rdfs:label xml:lang="en">Glucose fructose sirup</rdfs:label>
+        <rdfs:label xml:lang="de">Glukose-Fruktose-Sirup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#glucose_sirup -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#glucose_sirup">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sweetener"/>
+        <rdfs:label xml:lang="en">Glucose sirup</rdfs:label>
+        <rdfs:label xml:lang="de">Glukosesirup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#guar_gum -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#guar_gum">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#thickener"/>
+        <rdfs:label xml:lang="en">Guar gum</rdfs:label>
+        <rdfs:label xml:lang="de">Guarkernmehl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#herb -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#herb">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="de">Kräuter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#iodized_table_salt -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#iodized_table_salt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#spice"/>
+        <rdfs:label xml:lang="en">Iodized table salt</rdfs:label>
+        <rdfs:label xml:lang="de">Jodiertes Speisesalz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#juice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#beverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#lemon -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#lemon">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="en">Lemon</rdfs:label>
+        <rdfs:label xml:lang="de">Zitrone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#lemon_juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#lemon_juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Juice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#lemon"/>
+        <rdfs:label xml:lang="en">Lemon juice</rdfs:label>
+        <rdfs:label xml:lang="de">Zitronensaft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#mango -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#mango">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="de">Mango</rdfs:label>
+        <rdfs:label xml:lang="en">Mango</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#mango_juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#mango_juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Juice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#mango"/>
+        <rdfs:label xml:lang="en">Mango juice</rdfs:label>
+        <rdfs:label xml:lang="de">Mangosaft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#milk_product -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#milk_product">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="de">Milchprodukt</rdfs:label>
+        <rdfs:label xml:lang="en">Milk product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#milk_rice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#milk_rice">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+        <rdfs:label xml:lang="de">Milchreis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#modified_corn_starch -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#modified_corn_starch">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#Starch"/>
+        <rdfs:label xml:lang="en">Corn starch</rdfs:label>
+        <rdfs:label xml:lang="de">Modifizierte Maisstärke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#modified_starch -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#modified_starch">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#Starch"/>
+        <rdfs:label xml:lang="en">Modified starch</rdfs:label>
+        <rdfs:label xml:lang="de">Modifizierte Stärke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#mononatriumglutamat -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#mononatriumglutamat">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#flavor_enhancer"/>
+        <rdfs:label xml:lang="de">Mononatriumglutamat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#natriumlactat -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#natriumlactat">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#acidity_regulator"/>
+        <rdfs:label xml:lang="de">Natriumlactat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#nut -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#nut">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="de">Nuss</rdfs:label>
+        <rdfs:label xml:lang="en">Nut</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#oil -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#oil">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="en">Oil</rdfs:label>
+        <rdfs:label xml:lang="de">Öl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#onion -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#onion">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Vegetable"/>
+        <rdfs:label xml:lang="en">Onion</rdfs:label>
+        <rdfs:label xml:lang="de">Zwiebel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#orange -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#orange">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="de">Orange</rdfs:label>
+        <rdfs:label xml:lang="en">Orange</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#orange_juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#orange_juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Juice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#orange"/>
+        <rdfs:label xml:lang="en">Orange juice</rdfs:label>
+        <rdfs:label xml:lang="de">Orangensaft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#oregano -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#oregano">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#herb"/>
+        <rdfs:label xml:lang="de">Oregano</rdfs:label>
+        <rdfs:label xml:lang="en">Oregano</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#parsley -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#parsley">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#herb"/>
+        <rdfs:label xml:lang="en">Parsley</rdfs:label>
+        <rdfs:label xml:lang="de">Petersilie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#passionfruit -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#passionfruit">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="de">Maracuja</rdfs:label>
+        <rdfs:label xml:lang="en">Passionfruit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#passionfruit_juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#passionfruit_juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Juice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#passionfruit"/>
+        <rdfs:label xml:lang="de">Maracujasaft</rdfs:label>
+        <rdfs:label xml:lang="en">Passionfruit juice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#pepper -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#pepper">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#spice"/>
+        <rdfs:label xml:lang="en">Pepper</rdfs:label>
+        <rdfs:label xml:lang="de">Pfeffer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#rasberry -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#rasberry">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="de">Himbeere</rdfs:label>
+        <rdfs:label xml:lang="en">Rasberry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#rasberry_puree -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#rasberry_puree">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#rasberry"/>
+        <rdfs:label xml:lang="de">Himbeerpüree</rdfs:label>
+        <rdfs:label xml:lang="en">Rasberry puree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#rosemary -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#rosemary">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#herb"/>
+        <rdfs:label xml:lang="en">Rosemary</rdfs:label>
+        <rdfs:label xml:lang="de">Rosmarin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#rosemary_extract -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#rosemary_extract">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#antioxidant"/>
+        <rdfs:label xml:lang="en">Rosemary extract</rdfs:label>
+        <rdfs:label xml:lang="de">Rosmarinextrakt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#salt -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#salt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#spice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#seeds -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#seeds">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="de">Samen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#sonnenblumen-lecithine -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#sonnenblumen-lecithine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#emulgator"/>
+        <rdfs:label xml:lang="de">Sonnenblumen-Lecithine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#spice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#spice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="de">Gewürze</rdfs:label>
+        <rdfs:label xml:lang="en">Spice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#strawberry -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#strawberry">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Fruit"/>
+        <rdfs:label xml:lang="de">Erdbeere</rdfs:label>
+        <rdfs:label xml:lang="en">Strawberry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#strawberry_juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#strawberry_juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Juice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#strawberry"/>
+        <rdfs:label xml:lang="de">Erdbeersaft</rdfs:label>
+        <rdfs:label xml:lang="en">Strawberry juice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#strawberry_puree -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#strawberry_puree">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#strawberry"/>
+        <rdfs:label xml:lang="de">Erdbeerpüree</rdfs:label>
+        <rdfs:label xml:lang="en">Strawberry puree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#sugar -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#sugar">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#sweetener"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#sweetener -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#sweetener">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="en">Sweetener</rdfs:label>
+        <rdfs:label xml:lang="de">Süßungsmittel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#süßmolkepulver -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#süßmolkepulver">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#CowsMilk-Product"/>
+        <rdfs:label xml:lang="de">Süßmolkenpulver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#table_salt -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#table_salt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#spice"/>
+        <rdfs:label xml:lang="de">Speisesalz</rdfs:label>
+        <rdfs:label xml:lang="en">Table salt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#thickener -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#thickener">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#additive"/>
+        <rdfs:label xml:lang="de">Verdickungsmittel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#thyme -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#thyme">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#herb"/>
+        <rdfs:label xml:lang="en">Thyme</rdfs:label>
+        <rdfs:label xml:lang="de">Thymian</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#tomato -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#tomato">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/shop.owl#Vegetable"/>
+        <rdfs:label xml:lang="de">Tomate</rdfs:label>
+        <rdfs:label xml:lang="en">Tomato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#tomato_juice -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#tomato_juice">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Juice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#tomato"/>
+        <rdfs:label xml:lang="de">Tomatensaft</rdfs:label>
+        <rdfs:label xml:lang="en">Tomato juice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#vegetable_oil -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#vegetable_oil">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#oil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#vinegar -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#vinegar">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="de">Essig</rdfs:label>
+        <rdfs:label xml:lang="en">Vinegar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#wasaRosemarySeasalt -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#wasaRosemarySeasalt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#bread"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://knowrob.org/kb/iai-kitchen.owl#MeerSalz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301116"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310306"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#WholeWheatFlour"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#canola_oil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#rosemary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#rosemary_extract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#salt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/foodingredient#has_ingredient"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#yeast"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">wasa Delicate Crisp Rosemary &amp; SeaSalt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#wheat_starch -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#wheat_starch">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#Starch"/>
+        <rdfs:label xml:lang="de">Weizenstärke</rdfs:label>
+        <rdfs:label xml:lang="en">Wheat starch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#whole_egg -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#whole_egg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#chicken_egg"/>
+        <rdfs:label xml:lang="de">Vollei</rdfs:label>
+        <rdfs:label xml:lang="en">Whole egg</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#whole_milk_powder -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#whole_milk_powder">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#CowsMilk-Product"/>
+        <rdfs:label xml:lang="de">Vollmilchpulver</rdfs:label>
+        <rdfs:label xml:lang="en">Whole milk powder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#wholegrain_oat_flour -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#wholegrain_oat_flour">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#CerealGrainWithGluten"/>
+        <rdfs:label xml:lang="de">Hafer-Vollkornmehl</rdfs:label>
+        <rdfs:label xml:lang="en">Wholegrain oat flour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#wholegrain_oats -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#wholegrain_oats">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#CerealGrainWithGluten"/>
+        <rdfs:label xml:lang="de">Vollkorn-Haferflocken</rdfs:label>
+        <rdfs:label xml:lang="en">Wholegrain oats</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#wholegrain_wheatflakes -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#wholegrain_wheatflakes">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03315184"/>
+        <rdfs:label xml:lang="de">Vollkorn-Weizenflocken</rdfs:label>
+        <rdfs:label xml:lang="en">Wholegrain wheatflakes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#yeast -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#yeast">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/foodingredient#ingredient"/>
+        <rdfs:label xml:lang="de">Hefe</rdfs:label>
+        <rdfs:label xml:lang="en">Yeast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#yolk -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#yolk">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#chicken_egg"/>
+        <rdfs:label xml:lang="de">Eigelb</rdfs:label>
+        <rdfs:label xml:lang="en">Yolk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NonFoodKG/product-taxonomy#L(+)-tartaric_acid -->
+
+    <owl:Class rdf:about="http://purl.org/NonFoodKG/product-taxonomy#L(+)-tartaric_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#Acidifier"/>
+        <rdfs:label xml:lang="de">L(+)-Weinsäure</rdfs:label>
+        <rdfs:label xml:lang="en">L(+)-tartaric acid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#P4000400112156 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owl#P4000400112156">
+        <rdf:type rdf:resource="http://knowrob.org/kb/iai-kitchen.owl#MondaminPancakeMix"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4000400112156</gr:hasEAN_UCC-13>
+        <rdfs:label xml:lang="de">P4000400112156</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#P4000540003222 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owl#P4000540003222">
+        <rdf:type rdf:resource="http://knowrob.org/kb/iai-kitchen.owl#KoelnMuesliSchokoKeks"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4000540003222</gr:hasEAN_UCC-13>
+        <rdfs:label xml:lang="de">P4000540003222</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#P4003240919008 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owl#P4003240919008">
+        <rdf:type rdf:resource="http://knowrob.org/kb/iai-kitchen.owl#AlbiHimbeerJuice"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4003240919008</gr:hasEAN_UCC-13>
+        <rdfs:label xml:lang="de">P4003240919008</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#P4025500163921 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owl#P4025500163921">
+        <rdf:type rdf:resource="http://knowrob.org/kb/iai-kitchen.owl#ButterMilchErdbeere"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4025500163921</gr:hasEAN_UCC-13>
+        <rdfs:label xml:lang="de">P4025500163921</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#P40255682 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owl#P40255682">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#MIlchreisApfel"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40255682</gr:hasEAN_UCC-13>
+        <rdfs:label xml:lang="de">P40255682</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#P4027400168105 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owl#P4027400168105">
+        <rdf:type rdf:resource="http://knowrob.org/kb/iai-kitchen.owl#HelaCurryKetchup"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4027400168105</gr:hasEAN_UCC-13>
+        <rdfs:label xml:lang="de">P4027400168105</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#P4038700117328 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owl#P4038700117328">
+        <rdf:type rdf:resource="http://knowrob.org/kb/iai-kitchen.owl#TomatoAlGustoBasilikum"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4038700117328</gr:hasEAN_UCC-13>
+        <rdfs:label xml:lang="de">P4038700117328</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#P4038700117403 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owl#P4038700117403">
+        <rdf:type rdf:resource="http://knowrob.org/kb/iai-kitchen.owl#TomatoAlGustoKraeuter"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4038700117403</gr:hasEAN_UCC-13>
+        <rdfs:label xml:lang="de">P4038700117403</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owl#P7300400126229 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owl#P7300400126229">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#wasaRosemarySeasalt"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7300400126229</gr:hasEAN_UCC-13>
+        <rdfs:label xml:lang="de">P7300400126229</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/iai-kitchen.owlt#P4045145154108 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/iai-kitchen.owlt#P4045145154108">
+        <rdf:type rdf:resource="http://purl.org/NonFoodKG/product-taxonomy#HohesCMilderMultivitamin"/>
+        <gr:hasEAN_UCC-13 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4045145154108</gr:hasEAN_UCC-13>
+        <rdfs:comment>taxo?</rdfs:comment>
+        <rdfs:label xml:lang="de">P4045145154108</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
