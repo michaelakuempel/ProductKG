@@ -5,7 +5,7 @@ layout: default
 
 ## Applications
 
-Please also check out our web applications on this website: <a href="http://nonfoodkg.informatik.uni-bremen.de/">NonFoodKG web apps</a>
+Please also check out our web applications on this website: <a href="http://nonfoodkg.informatik.uni-bremen.de/">ProductKG web apps</a>
 
 These are some example applications that use NonFoodKG information:
 
