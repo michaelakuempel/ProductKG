@@ -11,13 +11,13 @@ All this can be used for daily acitivity applications on robots, mobile phones o
 
 # Querying the knowledge graph
 
-The knowledge graph is publicly available here and on <a href="https://triply.cc/">triply</a> (links see below), many thanks to the <a href="https://krr.cs.vu.nl/">knowledge representation and reasoning group</a> at the Vrije Universiteit Amsterdam.
+The knowledge graph is publicly available here and on <a href="https://krr.triply.cc/mkumpel/ProductKG/sparql/ProductKG">triply</a>, many thanks to the <a href="https://krr.cs.vu.nl/">knowledge representation and reasoning group</a> at the Vrije Universiteit Amsterdam.
 
-<h3><a href="">Predefined queries</a></h3> 
+<h3><a href="http://grlc.io/api/michaelakuempel/ProductKG/SPARQLfiles/">Predefined queries</a></h3> 
 <img src="UseCaseImg/grlc_logo_01.png" width="50" alt="grlc image"/>
 
-We created some predefined queries for everyone to test all versions of ProductKG via the <a href="">ProductKG grlc api</a>. grlc is a git repository linked data API constructor that automatically builds Web APIs using shared SPARQL queries <a href="https://github.com/CLARIAH/grlc">(grlc on github)</a>
-<h3>Version 1.0</h3> <a href="">ProductKG via triply SPARQL api</a>
+We created some predefined queries for everyone to test all versions of ProductKG via the <a href="http://grlc.io/api/michaelakuempel/ProductKG/SPARQLfiles/">ProductKG grlc api</a>. grlc is a git repository linked data API constructor that automatically builds Web APIs using shared SPARQL queries <a href="https://github.com/CLARIAH/grlc">(grlc on github)</a>
+<h3>Version 1.0</h3> <a href="https://krr.triply.cc/mkumpel/ProductKG/sparql/ProductKG">ProductKG via triply SPARQL api</a>
 
 
 
