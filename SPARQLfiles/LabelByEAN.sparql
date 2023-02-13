@@ -1,11 +1,11 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/FoodToNonFoodKG/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ summary: Retrieves all label for a given EAN
 #+ tags: 
 #+ - label
 #+ - ByEAN
 
-PREFIX lbl: <http://purl.org/NonFoodKG/label#>
+PREFIX lbl: <http://purl.org/ProductKG/label#>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
 
 SELECT ?name ?label WHERE {
