@@ -6,29 +6,11 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:Spec="https://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:term="http://purl.org/dc/terms/"
-     xmlns:trust="http://purl.org/NonFoodKG/trust#"
-     xmlns:symptom-disease="http://purl.org/NonFoodKG/symptom-disease#">
-    <Ontology rdf:about="http://purl.org/NonFoodKG/symptom-disease">
-        <versionIRI rdf:resource="http://purl.org/NonFoodKG/symptom-disease/1.0"/>
-        <term:contributor>Michaela Kümpel, Meike Wienholt</term:contributor>
-        <term:license rdf:datatype="xsd:anyURI">https://opendatacommons.org/licenses/by/1-0/</term:license>
-        <rdfs:comment>Symptoms of hpo (http://purl.obolibrary.org/obo/HP) are linked to diseases from doid (http://purl.obolibrary.org/obo/DOID).</rdfs:comment>
-        <Spec:copyright>Copyright (c) 2021 Michaela Kümpel
-
-This work is licensed under Open Data Commons Attribution License (ODC-BY 1.0 license).
-
-You are free:
-
-    To share: To copy, distribute and use the database.
-    To create: To produce works from the database.
-    To adapt: To modify, transform and build upon the database.
-
-As long as you:
-
-    Attribute: Attribute the work to the original authors. You must attribute any public use of the database, or works produced from the database. For any use or redistribution of the database, or works produced from it, you must make clear to others the license of the database and keep intact any notices on the original database.</Spec:copyright>
+     xmlns:symptom-disease="http://purl.org/ProductKG/symptom-disease#"
+     xmlns:symtpom-disease="http://purl.org/ProductKG/symtpom-disease#">
+    <Ontology rdf:about="http://purl.org/ProductKG/symptom-disease">
+        <versionIRI rdf:resource="http://purl.org/ProductKG/symptom-disease/1.0"/>
     </Ontology>
     
 
@@ -44,39 +26,21 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/trust#hasDbXref -->
+    <!-- http://purl.org/ProductKG/symptom-disease#hasDbXref -->
 
-    <AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#hasDbXref"/>
+    <AnnotationProperty rdf:about="http://purl.org/ProductKG/symptom-disease#hasDbXref"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/trust#source -->
+    <!-- http://purl.org/ProductKG/symptom-disease#source -->
 
-    <AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#source"/>
+    <AnnotationProperty rdf:about="http://purl.org/ProductKG/symptom-disease#source"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/trust#wikientry -->
+    <!-- http://purl.org/ProductKG/symptom-disease#wikientry -->
 
-    <AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#wikientry"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/contributor -->
-
-    <AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-    <AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
-    <!-- https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright -->
-
-    <AnnotationProperty rdf:about="https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright"/>
+    <AnnotationProperty rdf:about="http://purl.org/ProductKG/symptom-disease#wikientry"/>
     
 
 
@@ -91,17 +55,17 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#has_symptom -->
+    <!-- http://purl.org/ProductKG/symptom-disease#has_symptom -->
 
-    <ObjectProperty rdf:about="http://purl.org/NonFoodKG/symptom#has_symptom">
-        <inverseOf rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
+    <ObjectProperty rdf:about="http://purl.org/ProductKG/symptom-disease#has_symptom">
+        <inverseOf rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
     </ObjectProperty>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#is_symptom_of -->
+    <!-- http://purl.org/ProductKG/symptom-disease#is_symptom_of -->
 
-    <ObjectProperty rdf:about="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
+    <ObjectProperty rdf:about="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
     
 
 
@@ -150,1767 +114,1767 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Allergic_contact_dermatitis -->
+    <!-- http://purl.org/ProductKG/disease#Allergic_contact_dermatitis -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Allergic_contact_dermatitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Allergic_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_3042"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Allergic_contact_dermatitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Allergic_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_3042"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Allergic Contact Dermatitis</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Allergic_disease -->
+    <!-- http://purl.org/ProductKG/disease#Allergic_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Allergic_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Immune_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1205"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Allergic_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Immune_system_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1205"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Allergic Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Aquired_metabolic_disease -->
+    <!-- http://purl.org/ProductKG/disease#Aquired_metabolic_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Aquired_metabolic_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_metabolism"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0060158"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Aquired_metabolic_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_metabolism"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0060158"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Aquired Metabolic Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Artery_disease -->
+    <!-- http://purl.org/ProductKG/disease#Artery_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Artery_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Vascular_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Artery_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Vascular_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Artery Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Autoimmune_disease_of_gastrointestinal_tract -->
+    <!-- http://purl.org/ProductKG/disease#Autoimmune_disease_of_gastrointestinal_tract -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Autoimmune_disease_of_gastrointestinal_tract">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Gastrointestinal_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0060031"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Autoimmune_disease_of_gastrointestinal_tract">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Gastrointestinal_system_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0060031"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Autoimmune Disease of Gastrointestinal Tract</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis -->
+    <!-- http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Allergic_contact_dermatitis"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Allergic_contact_dermatitis"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Blistering"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Blistering"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Dry_Skin"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Dry_Skin"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Itchy_skin"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Itchy_skin"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Reddening"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Reddening"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Skin_rash"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Skin_rash"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0040057"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q55009124"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0040057"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q55009124"/>
         <rdfs:label xml:lang="en">Benzoic Acid Allergic Contact Dermatitis</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Cardiovascular_system_disease -->
+    <!-- http://purl.org/ProductKG/disease#Cardiovascular_system_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Cardiovascular_system_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1287"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Cardiovascular_system_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1287"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Cardiovascular System Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Disease -->
+    <!-- http://purl.org/ProductKG/disease#Disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Disease">
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Disease">
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Disease</rdfs:label>
         <rdfs:label xml:lang="de">Krankheiten</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity -->
+    <!-- http://purl.org/ProductKG/disease#Disease_of_anatomical_entity -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Disease of Anatomical Entity</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Disease_of_metabolism -->
+    <!-- http://purl.org/ProductKG/disease#Disease_of_metabolism -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Disease_of_metabolism">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID:0014667"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Disease_of_metabolism">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID:0014667"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Disease of Metabolism</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis -->
+    <!-- http://purl.org/ProductKG/disease#Eosinophillic_esophagitis -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Esophagitis"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Esophagitis"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Chest_pain"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Chest_pain"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Heartburn"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Heartburn"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Trouble_swallowing"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Trouble_swallowing"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_13922"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_13922"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Eosinophillic Esophagitis</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Esophageal_disease -->
+    <!-- http://purl.org/ProductKG/disease#Esophageal_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Esophageal_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Gastrointestinal_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_6050"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Esophageal_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Gastrointestinal_system_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_6050"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Esophageal Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Esophagitis -->
+    <!-- http://purl.org/ProductKG/disease#Esophagitis -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Esophagitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Esophageal_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_11963"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Esophagitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Esophageal_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_11963"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Esophagitis</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Essential_hypertension -->
+    <!-- http://purl.org/ProductKG/disease#Essential_hypertension -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Essential_hypertension">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_10825"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q988405"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Essential_hypertension">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_10825"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q988405"/>
         <rdfs:label xml:lang="en">Essential Hypertension</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia -->
+    <!-- http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Nutritional_deficiency_disease"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Nutritional_deficiency_disease"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Anemic_pallor"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Anemic_pallor"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Depression"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Depression"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Diarrhea"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Diarrhea"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Dyspnea"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Dyspnea"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Fatigue"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Fatigue"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Myasthenia"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Myasthenia"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Palpitations"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Palpitations"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Poor_appetite"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Poor_appetite"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Reduced_sense_of_taste"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Reduced_sense_of_taste"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Tingling_feet_and_hand"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Tingling_feet_and_hand"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Tinnitus"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Tinnitus"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Weight_Loss"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Weight_Loss"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_14026"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q18554661"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_14026"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q18554661"/>
         <rdfs:label xml:lang="en">Folic Acid Deficiency Anemia</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Gastrointestinal_system_disease -->
+    <!-- http://purl.org/ProductKG/disease#Gastrointestinal_system_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Gastrointestinal_system_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_77"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Gastrointestinal_system_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_77"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Gastrointestinal System Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Hypertension -->
+    <!-- http://purl.org/ProductKG/disease#Hypertension -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Hypertension">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Artery_disease"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Hypertension">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Artery_disease"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Blood_in_urine"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Blood_in_urine"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Chest_pain"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Chest_pain"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Confusion"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Confusion"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Dyspnea"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Dyspnea"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Fatigue"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Fatigue"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Headache"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Headache"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Irregular_heartbeat"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Irregular_heartbeat"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Nosebleed"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Nosebleed"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Visual_impairment"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Visual_impairment"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_10763"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q95566669"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_10763"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q95566669"/>
         <rdfs:label xml:lang="en">Hypertension</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Immune_system_disease -->
+    <!-- http://purl.org/ProductKG/disease#Immune_system_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Immune_system_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_2914"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Immune_system_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_2914"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Immune System Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Kidney_disease -->
+    <!-- http://purl.org/ProductKG/disease#Kidney_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Kidney_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Urinary_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_557"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Kidney_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Urinary_system_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_557"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Kidney Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Kidney_failure -->
+    <!-- http://purl.org/ProductKG/disease#Kidney_failure -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Kidney_failure">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Kidney_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1074"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Kidney_failure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Kidney_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1074"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Kidney Failure</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Lactic_acidosis -->
+    <!-- http://purl.org/ProductKG/disease#Lactic_acidosis -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Lactic_acidosis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Metabolic_acidosis"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Lactic_acidosis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Metabolic_acidosis"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Abdominal_pain"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Abdominal_pain"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Bloating"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Bloating"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Dyspnea"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Dyspnea"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Malaise"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Malaise"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Nausea"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Nausea"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Poor_appetite"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Poor_appetite"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Vomiting"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Vomiting"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_3650"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q1500373"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_3650"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q1500373"/>
         <rdfs:label xml:lang="en">Lactic Acidosis</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Metabolic_acidosis -->
+    <!-- http://purl.org/ProductKG/disease#Metabolic_acidosis -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Metabolic_acidosis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Aquired_metabolic_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0050758"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Metabolic_acidosis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Aquired_metabolic_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0050758"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Metabolic Acidosis</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Nutrition_disease -->
+    <!-- http://purl.org/ProductKG/disease#Nutrition_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Nutrition_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Aquired_metabolic_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_374"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Nutrition_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Aquired_metabolic_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_374"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Nutrition Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Nutritional_deficiency_disease -->
+    <!-- http://purl.org/ProductKG/disease#Nutritional_deficiency_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Nutritional_deficiency_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Nutrition_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_5113"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Nutritional_deficiency_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Nutrition_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_5113"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Nutritional Deficiency Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Scurvy -->
+    <!-- http://purl.org/ProductKG/disease#Scurvy -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Scurvy">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Nutritional_deficiency_disease"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Scurvy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Nutritional_deficiency_disease"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Anemia"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Anemia"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Bruising_susceptibility"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Bruising_susceptibility"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Fatigue"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Edema"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Gingivitis"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Fatigue"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Irritability"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Gingivitis"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Joint_pain"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Irritability"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Lower_limb_pain"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Joint_pain"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Myalgia"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Lower_limb_pain"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Petechiae"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Myalgia"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Edema"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Petechiae"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org(obo/DOID_13724"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q163865"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org(obo/DOID_13724"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q163865"/>
         <rdfs:label xml:lang="en">Scurvy</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Ulcerative_colitis -->
+    <!-- http://purl.org/ProductKG/disease#Ulcerative_colitis -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Ulcerative_colitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Autoimmune_disease_of_gastrointestinal_tract"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Ulcerative_colitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Autoimmune_disease_of_gastrointestinal_tract"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Abdominal_pain"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Abdominal_pain"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Diarrhea"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Diarrhea"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Fatigue"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Fatigue"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Poor_appetite"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Poor_appetite"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Weight_Loss"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Weight_Loss"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_8577"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q1477"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_8577"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q1477"/>
         <rdfs:label xml:lang="en">Ulcerative Colitis</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Uremia -->
+    <!-- http://purl.org/ProductKG/disease#Uremia -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Uremia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Kidney_failure"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Uremia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Kidney_failure"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Confusion"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Confusion"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Dyspnea"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Dyspnea"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Fatigue"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Fatigue"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Nausea"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Nausea"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Poor_appetite"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Poor_appetite"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Vomiting"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Vomiting"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Weight_Loss"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#has_symptom"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Weight_Loss"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_4676"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q13365776"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_4676"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q13365776"/>
         <rdfs:label xml:lang="en">Uremia</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Urinary_system_disease -->
+    <!-- http://purl.org/ProductKG/disease#Urinary_system_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Urinary_system_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_18"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Urinary_system_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_18"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Urinary System Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Vascular_disease -->
+    <!-- http://purl.org/ProductKG/disease#Vascular_disease -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/disease#Vascular_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Cardiovascular_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_178"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#doid"/>
+    <Class rdf:about="http://purl.org/ProductKG/disease#Vascular_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Cardiovascular_system_disease"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_178"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#doid"/>
         <rdfs:label xml:lang="en">Vascular Disease</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Abdominal_pain -->
+    <!-- http://purl.org/ProductKG/symptom#Abdominal_pain -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abdominal_pain">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abdominal_symptom"/>
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abdominal_pain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abdominal_symptom"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Lactic_acidosis"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Lactic_acidosis"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Ulcerative_colitis"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Ulcerative_colitis"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002027"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q183425"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002027"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q183425"/>
         <rdfs:label xml:lang="en">Abdominal Pain</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Abdominal_symptom -->
+    <!-- http://purl.org/ProductKG/symptom#Abdominal_symptom -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abdominal_symptom">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0011458"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abdominal_symptom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0011458"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
         <rdfs:label xml:lang="en">Abdominal Symptom</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_ear -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_ear">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000598"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Abnormality of the Ear</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_genitourinary_system -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_genitourinary_system">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000119"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Abnormality of the Genitourinary System</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001574"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Abnormality of the Integument and Skin</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_mouth -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_mouth">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000153"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Abnormality of the Mouth</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_musculoskeletal_system -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_musculoskeletal_system">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0033127"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Abnormality of the Musculoskeletal System</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Abnormality of the Nervous System</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nose -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nose">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000366"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Abnormality of the Nose</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_respiratory_system -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_respiratory_system">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002089"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Abnormality of the Respiratory System</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Anemia -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Anemia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_blood_and_blood_forming_tissues"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001903"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q5445"/>
-        <rdfs:label xml:lang="en">Anemia</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Anemic_pallor -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Anemic_pallor">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001017"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q21109120"/>
-        <rdfs:label xml:lang="en">Anemic Pallor</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Blistering -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Blistering">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0008066"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q276469"/>
-        <rdfs:label xml:lang="en">Blistering</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Bloating -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Bloating">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abdominal_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Lactic_acidosis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0003270"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q4927059"/>
-        <rdfs:label xml:lang="en">Bloating</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Blood_in_urine -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Blood_in_urine">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_genitourinary_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000790"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q373597"/>
-        <rdfs:label xml:lang="en">Blood in Urine</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Bruising_susceptibility -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Bruising_susceptibility">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000978"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q574491"/>
-        <rdfs:label xml:lang="en">Bruising Susceptibility</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Chest_pain -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Chest_pain">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Constitutional_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0100749"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q693058"/>
-        <rdfs:label xml:lang="en">Chest Pain</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Confusion -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Confusion">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Uremia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001289"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q557945"/>
-        <rdfs:label xml:lang="en">Confusion</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Constitutional_symptom -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Constitutional_symptom">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0025142"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Constitutional Symptom</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Depression -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Depression">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000716"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q4340209"/>
-        <rdfs:label xml:lang="en">Depression</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Diarrhea -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Diarrhea">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abdominal_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Ulcerative_colitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002014"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q40878"/>
-        <rdfs:label xml:lang="en">Diarrhea</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Dry_Skin -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Dry_Skin">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000958"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Dry Skin</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Dyspnea -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Dyspnea">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_respiratory_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Lactic_acidosis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Uremia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002094"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q188008"/>
-        <rdfs:label xml:lang="en">Difficulty Breathing</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Fatigue -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Fatigue">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Ulcerative_colitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Uremia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_001254"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q9690"/>
-        <rdfs:label xml:lang="de">Erschöpfung</rdfs:label>
-        <rdfs:label xml:lang="en">Lethargy</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Gingivitis -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Gingivitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_mouth"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000230"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q673083"/>
-        <rdfs:label xml:lang="en">Gingivits</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Headache -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Headache">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002315"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q86"/>
-        <rdfs:label xml:lang="en">Headache</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Heartburn -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Heartburn">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abdominal_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002020"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q537297"/>
-        <rdfs:label xml:lang="en">Heartburn</rdfs:label>
-        <rdfs:label xml:lang="de">Sodbrennen</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Inflamed_eyes -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Inflamed_eyes">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#abormality_of_the_eye"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000310"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#symp"/>
-        <rdfs:label xml:lang="en">Inflamed Eyes</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Irregular_heartbeat -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Irregular_heartbeat">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_cardiovascular_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0011675"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q189331"/>
-        <rdfs:label xml:lang="en">Irregular Heartbeat</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Irritability -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Irritability">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000737"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q29299"/>
-        <rdfs:label xml:lang="en">Irritability</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Itchy_eyes -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Itchy_eyes">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#abormality_of_the_eye"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0033841"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Itchy Eyes</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Itchy_skin -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Itchy_skin">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000989"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q199602"/>
-        <rdfs:label xml:lang="en">Itchy Skin</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Joint_pain -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Joint_pain">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Constitutional_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo:HP_0002829"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q683498"/>
-        <rdfs:label xml:lang="en">Joint Pain</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Lower_limb_pain -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Lower_limb_pain">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Constitutional_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0012514"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Lower Limb Pain</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Malaise -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Malaise">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Constitutional_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Lactic_acidosis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0033834"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q2673323"/>
-        <rdfs:label xml:lang="en">Malaise</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Myalgia -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Myalgia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Constitutional_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0003326"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q474959"/>
-        <rdfs:label xml:lang="en">Muscle Pain</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Myasthenia -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Myasthenia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_musculoskeletal_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q270421"/>
-        <rdfs:label xml:lang="en">Muscle Weakness</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Nausea -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Nausea">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abdominal_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Lactic_acidosis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Uremia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002018"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q186889"/>
-        <rdfs:label xml:lang="en">nausea</rdfs:label>
-        <rdfs:label xml:lang="de">Übelkeit</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Nosebleed -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Nosebleed">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nose"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000421"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q202013"/>
-        <rdfs:label xml:lang="en">Nosebleed</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Palpitations -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Palpitations">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_cardiovascular_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001962"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q1123260"/>
-        <rdfs:label xml:lang="en">Palpitations</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Petechiae -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Petechiae">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000967"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q1412657"/>
-        <rdfs:label xml:lang="en">Petechiae</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Poor_appetite -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Poor_appetite">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abdominal_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Lactic_acidosis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Ulcerative_colitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Uremia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_004396"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q102186869"/>
-        <rdfs:label xml:lang="en">Poor Appetite</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Reddening -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Reddening">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0010783"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q1166142"/>
-        <rdfs:label xml:lang="en">Redness</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Reduced_sense_of_taste -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Reduced_sense_of_taste">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000224"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <rdfs:label xml:lang="en">Reduced Sense of Taste</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Skin_rash -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Skin_rash">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000988"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q653197"/>
-        <rdfs:label xml:lang="en">Skin Rash</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Symptom -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Symptom"/>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Tingling_feet_and_hand -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Tingling_feet_and_hand">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0031006"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q420915"/>
-        <rdfs:label xml:lang="en">Tingling/Numbness in Feet and Hand</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Tinnitus -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Tinnitus">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_ear"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000360"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q192309"/>
-        <rdfs:label xml:lang="en">Tinnitus</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Trouble_swallowing -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Trouble_swallowing">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_nervous_system"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q623289"/>
-        <rdfs:label xml:lang="en">Trouble Swallowing</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Visual_impairment -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Visual_impairment">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#abormality_of_the_eye"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000505"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q737460"/>
-        <rdfs:label xml:lang="en">Visual Impairment</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Vomiting -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Vomiting">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abdominal_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Lactic_acidosis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Uremia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002013"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q127076"/>
-        <rdfs:label xml:lang="de">Erbrechen</rdfs:label>
-        <rdfs:label xml:lang="en">vomiting</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Weight_Loss -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Weight_Loss">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Constitutional_symptom"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Ulcerative_colitis"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Uremia"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001824"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q718113"/>
-        <rdfs:label xml:lang="en">Weight loss</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#abormality_of_the_eye -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#abormality_of_the_eye">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000478"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/symptom-disease#symp"/>
-        <rdfs:label xml:lang="en">Abnormality of the Eye</rdfs:label>
-    </Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_blood_and_blood_forming_tissues -->
-
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_blood_and_blood_forming_tissues">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001871"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_blood_and_blood_forming_tissues -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_blood_and_blood_forming_tissues">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001871"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
         <rdfs:label xml:lang="en">Abnormality of blood and blood-forming tissues</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_metabolism_and_homeostasis -->
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_metabolism_and_homeostasis -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_metabolism_and_homeostasis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001939"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_metabolism_and_homeostasis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001939"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
         <rdfs:label xml:lang="en">Abnormality of Metabolism and Homeostasis</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_cardiovascular_system -->
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_cardiovascular_system -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_cardiovascular_system">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001626"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_cardiovascular_system">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001626"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
         <rdfs:label xml:lang="en">Abnormality of the Cardiovascular system</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Edema -->
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_ear -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Edema">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_ear">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000598"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Abnormality of the Ear</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_genitourinary_system -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_genitourinary_system">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000119"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Abnormality of the Genitourinary System</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001574"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Abnormality of the Integument and Skin</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_mouth -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_mouth">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000153"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Abnormality of the Mouth</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_musculoskeletal_system -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_musculoskeletal_system">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0033127"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Abnormality of the Musculoskeletal System</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Abnormality of the Nervous System</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_nose -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_nose">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000366"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Abnormality of the Nose</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_respiratory_system -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_respiratory_system">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002089"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Abnormality of the Respiratory System</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Anemia -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Anemia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_blood_and_blood_forming_tissues"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
             </Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000969"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q152234"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001903"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q5445"/>
+        <rdfs:label xml:lang="en">Anemia</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Anemic_pallor -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Anemic_pallor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001017"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q21109120"/>
+        <rdfs:label xml:lang="en">Anemic Pallor</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Blistering -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Blistering">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0008066"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q276469"/>
+        <rdfs:label xml:lang="en">Blistering</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Bloating -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Bloating">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abdominal_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Lactic_acidosis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0003270"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q4927059"/>
+        <rdfs:label xml:lang="en">Bloating</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Blood_in_urine -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Blood_in_urine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_genitourinary_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000790"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q373597"/>
+        <rdfs:label xml:lang="en">Blood in Urine</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Bruising_susceptibility -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Bruising_susceptibility">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000978"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q574491"/>
+        <rdfs:label xml:lang="en">Bruising Susceptibility</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Chest_pain -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Chest_pain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Constitutional_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0100749"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q693058"/>
+        <rdfs:label xml:lang="en">Chest Pain</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Confusion -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Confusion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Uremia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001289"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q557945"/>
+        <rdfs:label xml:lang="en">Confusion</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Constitutional_symptom -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Constitutional_symptom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0025142"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Constitutional Symptom</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Depression -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Depression">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000716"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q4340209"/>
+        <rdfs:label xml:lang="en">Depression</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Diarrhea -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Diarrhea">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abdominal_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Ulcerative_colitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002014"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q40878"/>
+        <rdfs:label xml:lang="en">Diarrhea</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Dry_Skin -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Dry_Skin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000958"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Dry Skin</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Dyspnea -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Dyspnea">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_respiratory_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Lactic_acidosis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Uremia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002094"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q188008"/>
+        <rdfs:label xml:lang="en">Difficulty Breathing</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Edema -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Edema">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000969"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q152234"/>
         <rdfs:label xml:lang="en">Edema</rdfs:label>
         <rdfs:label xml:lang="de">Ödem</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Hypercholesterolemia -->
+    <!-- http://purl.org/ProductKG/symptom#Fatigue -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Hypercholesterolemia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0003124"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q762713"/>
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Fatigue">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Ulcerative_colitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Uremia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_001254"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q9690"/>
+        <rdfs:label xml:lang="de">Erschöpfung</rdfs:label>
+        <rdfs:label xml:lang="en">Lethargy</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Gingivitis -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Gingivitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_mouth"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000230"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q673083"/>
+        <rdfs:label xml:lang="en">Gingivits</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Headache -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Headache">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002315"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q86"/>
+        <rdfs:label xml:lang="en">Headache</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Heartburn -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Heartburn">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abdominal_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002020"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q537297"/>
+        <rdfs:label xml:lang="en">Heartburn</rdfs:label>
+        <rdfs:label xml:lang="de">Sodbrennen</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Hypercholesterolemia -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Hypercholesterolemia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0003124"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q762713"/>
         <rdfs:label xml:lang="de">Hypercholesterinämie</rdfs:label>
         <rdfs:label xml:lang="en">Hypercholesterolemia</rdfs:label>
     </Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Hyperglycinemia -->
+    <!-- http://purl.org/ProductKG/symptom#Hyperglycinemia -->
 
-    <Class rdf:about="http://purl.org/NonFoodKG/symptom#Hyperglycinemia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002154"/>
-        <trust:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Hyperglycinemia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002154"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
         <rdfs:label xml:lang="en">Hyperglycinemia</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Inflamed_eyes -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Inflamed_eyes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#abormality_of_the_eye"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000310"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#symp"/>
+        <rdfs:label xml:lang="en">Inflamed Eyes</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Irregular_heartbeat -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Irregular_heartbeat">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_cardiovascular_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0011675"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q189331"/>
+        <rdfs:label xml:lang="en">Irregular Heartbeat</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Irritability -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Irritability">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000737"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q29299"/>
+        <rdfs:label xml:lang="en">Irritability</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Itchy_eyes -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Itchy_eyes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#abormality_of_the_eye"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0033841"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Itchy Eyes</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Itchy_skin -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Itchy_skin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000989"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q199602"/>
+        <rdfs:label xml:lang="en">Itchy Skin</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Joint_pain -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Joint_pain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Constitutional_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo:HP_0002829"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q683498"/>
+        <rdfs:label xml:lang="en">Joint Pain</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Lower_limb_pain -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Lower_limb_pain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Constitutional_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0012514"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Lower Limb Pain</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Malaise -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Malaise">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Constitutional_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Lactic_acidosis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0033834"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q2673323"/>
+        <rdfs:label xml:lang="en">Malaise</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Myalgia -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Myalgia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Constitutional_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0003326"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q474959"/>
+        <rdfs:label xml:lang="en">Muscle Pain</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Myasthenia -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Myasthenia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_musculoskeletal_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001324"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q270421"/>
+        <rdfs:label xml:lang="en">Muscle Weakness</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Nausea -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Nausea">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abdominal_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Lactic_acidosis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Uremia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002018"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q186889"/>
+        <rdfs:label xml:lang="en">nausea</rdfs:label>
+        <rdfs:label xml:lang="de">Übelkeit</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Nosebleed -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Nosebleed">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_nose"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000421"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q202013"/>
+        <rdfs:label xml:lang="en">Nosebleed</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Palpitations -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Palpitations">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_cardiovascular_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001962"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q1123260"/>
+        <rdfs:label xml:lang="en">Palpitations</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Petechiae -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Petechiae">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000967"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q1412657"/>
+        <rdfs:label xml:lang="en">Petechiae</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Poor_appetite -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Poor_appetite">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abdominal_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Lactic_acidosis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Ulcerative_colitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Uremia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_004396"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q102186869"/>
+        <rdfs:label xml:lang="en">Poor Appetite</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Reddening -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Reddening">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0010783"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q1166142"/>
+        <rdfs:label xml:lang="en">Redness</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Reduced_sense_of_taste -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Reduced_sense_of_taste">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000224"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <rdfs:label xml:lang="en">Reduced Sense of Taste</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Skin_rash -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Skin_rash">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000988"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q653197"/>
+        <rdfs:label xml:lang="en">Skin Rash</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Symptom -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Symptom"/>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Tingling_feet_and_hand -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Tingling_feet_and_hand">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0031006"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q420915"/>
+        <rdfs:label xml:lang="en">Tingling/Numbness in Feet and Hand</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Tinnitus -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Tinnitus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_ear"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000360"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q192309"/>
+        <rdfs:label xml:lang="en">Tinnitus</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Trouble_swallowing -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Trouble_swallowing">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_nervous_system"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002015"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q623289"/>
+        <rdfs:label xml:lang="en">Trouble Swallowing</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Visual_impairment -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Visual_impairment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#abormality_of_the_eye"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000505"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q737460"/>
+        <rdfs:label xml:lang="en">Visual Impairment</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Vomiting -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Vomiting">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abdominal_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Lactic_acidosis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Uremia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002013"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q127076"/>
+        <rdfs:label xml:lang="de">Erbrechen</rdfs:label>
+        <rdfs:label xml:lang="en">vomiting</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Weight_Loss -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#Weight_Loss">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Constitutional_symptom"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Ulcerative_colitis"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.org/ProductKG/symptom-disease#is_symptom_of"/>
+                <someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Uremia"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001824"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:wikientry rdf:resource="https://www.wikidata.org/entity/Q718113"/>
+        <rdfs:label xml:lang="en">Weight loss</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#abormality_of_the_eye -->
+
+    <Class rdf:about="http://purl.org/ProductKG/symptom#abormality_of_the_eye">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <symptom-disease:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000478"/>
+        <symptom-disease:source rdf:resource="http://purl.obolibrary.org/obo/hpo"/>
+        <symptom-disease:source rdf:resource="http://purl.org/ProductKG/symptom-disease#symp"/>
+        <rdfs:label xml:lang="en">Abnormality of the Eye</rdfs:label>
     </Class>
     
 
@@ -1935,17 +1899,17 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom-disease#doid -->
+    <!-- http://purl.org/ProductKG/symptom-disease#doid -->
 
-    <NamedIndividual rdf:about="http://purl.org/NonFoodKG/symptom-disease#doid">
+    <NamedIndividual rdf:about="http://purl.org/ProductKG/symptom-disease#doid">
         <obo:isRealizedBy>http://purl.obolibrary.org/obo/doid.owl</obo:isRealizedBy>
     </NamedIndividual>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom-disease#symp -->
+    <!-- http://purl.org/ProductKG/symptom-disease#symp -->
 
-    <NamedIndividual rdf:about="http://purl.org/NonFoodKG/symptom-disease#symp">
+    <NamedIndividual rdf:about="http://purl.org/ProductKG/symptom-disease#symp">
         <obo:isRealizedBy>https://www.ebi.ac.uk/ol</obo:isRealizedBy>
     </NamedIndividual>
 </rdf:RDF>

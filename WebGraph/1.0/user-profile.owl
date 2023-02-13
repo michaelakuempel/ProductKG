@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/NonFoodKG/user-profile#"
-     xml:base="http://purl.org/NonFoodKG/user-profile"
+<rdf:RDF xmlns="http://purl.org/ProductKG/user-profile#"
+     xml:base="http://purl.org/ProductKG/user-profile"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,11 +9,11 @@
      xmlns:food="http://purl.org/heals/food/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:term="http://purl.org/dc/terms/"
-     xmlns:trust="http://purl.org/NonFoodKG/trust#"
+     xmlns:trust="http://purl.org/ProductKG/trust#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:user-profile="http://purl.org/NonFoodKG/user-profile#">
-    <owl:Ontology rdf:about="http://purl.org/NonFoodKG/user-profile">
-        <owl:versionIRI rdf:resource="http://purl.org/NonFoodKG/user-profile/1.0"/>
+     xmlns:user-profile="http://purl.org/ProductKG/user-profile#">
+    <owl:Ontology rdf:about="http://purl.org/ProductKG/user-profile">
+        <owl:versionIRI rdf:resource="http://purl.org/ProductKG/user-profile/1.0"/>
         <term:contributor>Michaela Kümpel</term:contributor>
         <term:license>https://opendatacommons.org/licenses/by/1-0/</term:license>
         <rdfs:comment>A user profile skeleton that can be used for various applications. To be imported into application ontologies where users are instatiated.</rdfs:comment>
@@ -45,33 +45,33 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/trust#source -->
+    <!-- http://purl.org/ProductKG/trust#source -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#source"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/trust#source"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#data_type -->
+    <!-- http://purl.org/ProductKG/user-profile#data_type -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/user-profile#data_type"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/user-profile#data_type"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#datatype_description -->
+    <!-- http://purl.org/ProductKG/user-profile#datatype_description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/user-profile#datatype_description"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/user-profile#datatype_description"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#unit -->
+    <!-- http://purl.org/ProductKG/user-profile#unit -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/user-profile#unit"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/user-profile#unit"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#unit_range -->
+    <!-- http://purl.org/ProductKG/user-profile#unit_range -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/user-profile#unit_range"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/user-profile#unit_range"/>
     
 
 
@@ -116,19 +116,19 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#has_age_group -->
+    <!-- http://purl.org/ProductKG/user-profile#has_age_group -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/user-profile#has_age_group">
-        <rdfs:range rdf:resource="http://purl.org/NonFoodKG/user-profile#age_group"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/ProductKG/user-profile#has_age_group">
+        <rdfs:range rdf:resource="http://purl.org/ProductKG/user-profile#age_group"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has age group</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#has_gender -->
+    <!-- http://purl.org/ProductKG/user-profile#has_gender -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/user-profile#has_gender">
-        <rdfs:range rdf:resource="http://purl.org/NonFoodKG/user-profile#gender"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/ProductKG/user-profile#has_gender">
+        <rdfs:range rdf:resource="http://purl.org/ProductKG/user-profile#gender"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has gender</rdfs:label>
     </owl:ObjectProperty>
     
@@ -145,82 +145,82 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#age10to13 -->
+    <!-- http://purl.org/ProductKG/user-profile#age10to13 -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#age10to13">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#age_group"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#age10to13">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#age_group"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kinder 10 bis unter 13 Jahre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#age13to15 -->
+    <!-- http://purl.org/ProductKG/user-profile#age13to15 -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#age13to15">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#age_group"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#age13to15">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#age_group"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kinder 13 bis unter 15 Jahre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#age15to19 -->
+    <!-- http://purl.org/ProductKG/user-profile#age15to19 -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#age15to19">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#age_group"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#age15to19">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#age_group"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jugendliche 15 bis unter 19 Jahre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#age19to25 -->
+    <!-- http://purl.org/ProductKG/user-profile#age19to25 -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#age19to25">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#age_group"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#age19to25">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#age_group"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erwachsene 19 bis unter 25 Jahre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#age25to51 -->
+    <!-- http://purl.org/ProductKG/user-profile#age25to51 -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#age25to51">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#age_group"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#age25to51">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#age_group"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erwachsene 25 bis unter 51 Jahre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#age51to65 -->
+    <!-- http://purl.org/ProductKG/user-profile#age51to65 -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#age51to65">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#age_group"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#age51to65">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#age_group"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erwachsene 51 bis unter 65 Jahre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#age7to10 -->
+    <!-- http://purl.org/ProductKG/user-profile#age7to10 -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#age7to10">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#age_group"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#age7to10">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#age_group"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kinder 7 bis unter 10 Jahre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#age_group -->
+    <!-- http://purl.org/ProductKG/user-profile#age_group -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#age_group">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#demographics"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#age_group">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#demographics"/>
         <rdfs:label xml:lang="en">Age Group</rdfs:label>
         <rdfs:label xml:lang="de">Altersgruppe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#demographics -->
+    <!-- http://purl.org/ProductKG/user-profile#demographics -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#demographics">
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#demographics">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">Demographics</rdfs:label>
         <rdfs:label xml:lang="de">Demographie</rdfs:label>
@@ -228,49 +228,49 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#diverse -->
+    <!-- http://purl.org/ProductKG/user-profile#diverse -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#diverse">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#gender"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#diverse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#gender"/>
         <rdfs:label xml:lang="de">divers</rdfs:label>
         <rdfs:label xml:lang="en">diverse</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#female -->
+    <!-- http://purl.org/ProductKG/user-profile#female -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#female">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#gender"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#female">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#gender"/>
         <rdfs:label xml:lang="en">Female</rdfs:label>
         <rdfs:label xml:lang="de">Weiblich</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#gender -->
+    <!-- http://purl.org/ProductKG/user-profile#gender -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#gender">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#demographics"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#gender">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#demographics"/>
         <rdfs:label xml:lang="en">Gender</rdfs:label>
         <rdfs:label xml:lang="de">Geschlecht</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#male -->
+    <!-- http://purl.org/ProductKG/user-profile#male -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#male">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/user-profile#gender"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#male">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/user-profile#gender"/>
         <rdfs:label xml:lang="en">Male</rdfs:label>
         <rdfs:label xml:lang="de">Männlich</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/user-profile#user -->
+    <!-- http://purl.org/ProductKG/user-profile#user -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/user-profile#user">
+    <owl:Class rdf:about="http://purl.org/ProductKG/user-profile#user">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User</rdfs:label>
     </owl:Class>

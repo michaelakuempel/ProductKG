@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/NonFoodKG/quantity#"
-     xml:base="http://purl.org/NonFoodKG/quantity"
+<rdf:RDF xmlns="http://purl.org/ProductKG/quantity#"
+     xml:base="http://purl.org/ProductKG/quantity"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -8,10 +8,10 @@
      xmlns:Spec="https://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:term="http://purl.org/dc/terms/"
-     xmlns:trust="http://purl.org/NonFoodKG/trust#"
+     xmlns:trust="http://purl.org/ProductKG/trust#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.org/NonFoodKG/quantity">
-        <owl:versionIRI rdf:resource="http://purl.org/NonFoodKG/quantity/1.0"/>
+    <owl:Ontology rdf:about="http://purl.org/ProductKG/quantity">
+        <owl:versionIRI rdf:resource="http://purl.org/ProductKG/quantity/1.0"/>
         <term:contributor>Michaela Kümpel</term:contributor>
         <term:license>https://opendatacommons.org/licenses/by/1-0/</term:license>
         <rdfs:comment>A quantity skeleton that can be used for various applications. Re-using the qudt scheme (http://qudt.org/).</rdfs:comment>
@@ -43,9 +43,9 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/trust#source -->
+    <!-- http://purl.org/ProductKG/trust#source -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#source"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/trust#source"/>
     
 
 
@@ -126,25 +126,25 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/quantity#Milliliter -->
+    <!-- http://purl.org/ProductKG/quantity#Milliliter -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/quantity#Milliliter">
+    <owl:Class rdf:about="http://purl.org/ProductKG/quantity#Milliliter">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#VolumeUnit"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/quantity#Teaspoon -->
+    <!-- http://purl.org/ProductKG/quantity#Teaspoon -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/quantity#Teaspoon">
+    <owl:Class rdf:about="http://purl.org/ProductKG/quantity#Teaspoon">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#VolumeUnit"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/quantity#pinch -->
+    <!-- http://purl.org/ProductKG/quantity#pinch -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/quantity#pinch">
+    <owl:Class rdf:about="http://purl.org/ProductKG/quantity#pinch">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt#VolumeUnit"/>
     </owl:Class>
     
