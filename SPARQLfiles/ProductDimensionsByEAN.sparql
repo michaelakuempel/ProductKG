@@ -1,10 +1,10 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/FoodToNonFoodKG/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 #+ summary: Retrieves all product dimensions for a given EAN
 #+ tags: 
 #+ - ByEAN
 #+ - Dimensions
 
-PREFIX dim: <http://knowrob.org/kg/ProductDimensions.owl#>
+PREFIX dim: <http://purl.org/ProductKG/dimension#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
