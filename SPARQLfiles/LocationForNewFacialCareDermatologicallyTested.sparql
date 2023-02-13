@@ -1,4 +1,4 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/FoodToNonFoodKG/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ summary: Retrieves shelf location for new facial care products that are dermatologically tested
 #+ tags: 
@@ -8,9 +8,9 @@
 #Result set empty - no products with flag "NEW"
 
 
-PREFIX loc: <http://purl.org/NonFoodKG/location#>
-PREFIX lbl: <http://purl.org/NonFoodKG/label#>
-PREFIX tax: <http://purl.org/NonFoodKG/product-taxonomy#>
+PREFIX loc: <http://purl.org/ProductKG/location#>
+PREFIX lbl: <http://purl.org/ProductKG/label#>
+PREFIX tax: <http://purl.org/ProductKG/product-taxonomy#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
 
