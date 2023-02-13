@@ -1,11 +1,11 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/FoodToNonFoodKG/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ summary: Retrieves all products with fragrance as ingredient
 #+ tags: 
 #+ - ingredients
 
-PREFIX allergen: <http://purl.org/NonFoodKG/allergen#>
-PREFIX in: <http://purl.org/NonFoodKG/nonfoodingredient#>
+PREFIX allergen: <http://purl.org/ProductKG/allergen#>
+PREFIX in: <http://purl.org/ProductKG/nonfoodingredient#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
