@@ -1,11 +1,11 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/FoodToNonFoodKG/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ summary: Retrieves shelf location for detergent
 #+ tags: 
 #+ - location
 
-PREFIX tax: <http://purl.org/NonFoodKG/product-taxonomy#>
-PREFIX loc: <http://purl.org/NonFoodKG/location#>
+PREFIX tax: <http://purl.org/ProductKG/product-taxonomy#>
+PREFIX loc: <http://purl.org/ProductKG/location#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
 
