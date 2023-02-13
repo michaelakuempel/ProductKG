@@ -1,4 +1,4 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductCatalog/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ summary: Retrieves all breakfast recipes with ingridients and substitutes
 #+ tags: 
