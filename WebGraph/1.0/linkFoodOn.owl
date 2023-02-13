@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/NonFoodKG/linkFoodOn#"
-     xml:base="http://purl.org/NonFoodKG/linkFoodOn"
+<rdf:RDF xmlns="http://purl.org/ProductKG/linkFoodOn#"
+     xml:base="http://purl.org/ProductKG/linkFoodOn"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,8 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:term="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.org/NonFoodKG/linkFoodOn">
-        <owl:versionIRI rdf:resource="http://purl.org/NonFoodKG/linkFoodOn/1.0"/>
+    <owl:Ontology rdf:about="http://purl.org/ProductKG/linkFoodOn">
+        <owl:versionIRI rdf:resource="http://purl.org/ProductKG/linkFoodOn/1.0"/>
         <term:contributor>Michaela Kümpel</term:contributor>
         <term:license>https://opendatacommons.org/licenses/by/1-0/</term:license>
         <rdfs:comment>Excerpt of the FoodOn ontology (https://foodon.org/) about food products, used to integrate food product information in a non-food and food taxonomy in the retail context.</rdfs:comment>
@@ -42,27 +42,27 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/linkFoodOn#equivalentClass -->
+    <!-- http://purl.org/ProductKG/linkFoodOn#equivalentClass -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/linkFoodOn#equivalentClass"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/linkFoodOn#equivalentClass"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/linkFoodOn#intersectionOf -->
+    <!-- http://purl.org/ProductKG/linkFoodOn#intersectionOf -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/linkFoodOn#intersectionOf"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/linkFoodOn#intersectionOf"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/linkFoodOn#onProperty -->
+    <!-- http://purl.org/ProductKG/linkFoodOn#onProperty -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/linkFoodOn#onProperty"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/linkFoodOn#onProperty"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/linkFoodOn#someValuesFrom -->
+    <!-- http://purl.org/ProductKG/linkFoodOn#someValuesFrom -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/linkFoodOn#someValuesFrom"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/linkFoodOn#someValuesFrom"/>
     
 
 

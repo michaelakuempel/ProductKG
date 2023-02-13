@@ -1,35 +1,15 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/NonFoodKG/ingredient-disease#"
-     xml:base="http://purl.org/NonFoodKG/ingredient-disease"
+<rdf:RDF xmlns="http://purl.org/ProductKG/ingredient-disease#"
+     xml:base="http://purl.org/ProductKG/ingredient-disease"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:Spec="https://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:term="http://purl.org/dc/terms/"
-     xmlns:trust="http://purl.org/NonFoodKG/trust#"
-     xmlns:ingredient-disease="http://purl.org/NonFoodKG/ingredient-disease#">
-    <owl:Ontology rdf:about="http://purl.org/NonFoodKG/ingredient-disease">
-        <owl:versionIRI rdf:resource="http://purl.org/NonFoodKG/ingredient-disease/1.0"/>
-        <term:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michaela Kümpel, Meike Wienholt</term:contributor>
-        <term:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://opendatacommons.org/licenses/by/1-0/</term:license>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linking product ingredients to diseases and symptoms.</rdfs:comment>
-        <Spec:copyright rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copyright (c) 2021 Michaela Kümpel
-
-This work is licensed under Open Data Commons Attribution License (ODC-BY 1.0 license).
-                              
-You are free:
-
-    To share: To copy, distribute and use the database.
-    To create: To produce works from the database.
-    To adapt: To modify, transform and build upon the database.
-
-As long as you:
-
-    Attribute the work to the original authors. You must attribute any public use of the database, or works produced from the database. For any use or redistribution of the database, or works produced from it,
-    you must make clear to others the license of the database and keep intact any notices on the original database.</Spec:copyright>
+     xmlns:ingredient-disease="http://purl.org/ProductKG/ingredient-disease#">
+    <owl:Ontology rdf:about="http://purl.org/ProductKG/ingredient-disease">
+        <owl:versionIRI rdf:resource="http://purl.org/ProductKG/ingredient-disease/1.0"/>
     </owl:Ontology>
     
 
@@ -45,39 +25,21 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/trust#hasDbXref -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#hasDbXref -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#hasDbXref"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#hasDbXref"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/trust#source -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#source -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#source"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#source"/>
     
 
 
-    <!-- http://purl.org/NonFoodKG/trust#wikientry -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#wikientry -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/NonFoodKG/trust#wikientry"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/contributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
-    <!-- https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright -->
-
-    <owl:AnnotationProperty rdf:about="https://www.omg.org/techprocess/ab/SpecificationMetadata/copyright"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#wikientry"/>
     
 
 
@@ -92,45 +54,45 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#is_treatment_for -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#has_symptom -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/ingredient-disease#is_treatment_for">
-        <owl:inverseOf rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#possible_treatment"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#has_symptom">
+        <owl:inverseOf rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_symptom_of"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#is_symptom_of -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by">
-        <owl:inverseOf rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#is_symptom_of"/>
+    
+
+
+    <!-- http://purl.org/ProductKG/ingredient-disease#is_treatment_for -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#is_treatment_for">
+        <owl:inverseOf rdf:resource="http://purl.org/ProductKG/ingredient-disease#possible_treatment"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#possible_treatment -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#is_triggered_by -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/ingredient-disease#possible_treatment"/>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#triggers -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/symptom#has_symptom -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/symptom#has_symptom">
-        <owl:inverseOf rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#is_triggered_by">
+        <owl:inverseOf rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#is_symptom_of -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#possible_treatment -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#possible_treatment"/>
+    
+
+
+    <!-- http://purl.org/ProductKG/ingredient-disease#triggers -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#triggers"/>
     
 
 
@@ -145,9 +107,9 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#isRealizedBy -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#isRealizedBy -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/NonFoodKG/ingredient-disease#isRealizedBy"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/ProductKG/ingredient-disease#isRealizedBy"/>
     
 
 
@@ -162,485 +124,509 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Allergic_contact_dermatitis -->
+    <!-- http://purl.org/ProductKG/disease#Allergic_contact_dermatitis -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Allergic_contact_dermatitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Allergic_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_3042"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Allergic_contact_dermatitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Allergic_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_3042"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Allergic Contact Dermatitis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Allergic_disease -->
+    <!-- http://purl.org/ProductKG/disease#Allergic_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Allergic_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Immune_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1205"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Allergic_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Immune_system_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1205"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Allergic Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Aquired_metabolic_disease -->
+    <!-- http://purl.org/ProductKG/disease#Aquired_metabolic_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Aquired_metabolic_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_metabolism"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0060158"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Aquired_metabolic_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_metabolism"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0060158"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Aquired Metabolic Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Artery_disease -->
+    <!-- http://purl.org/ProductKG/disease#Artery_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Artery_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Vascular_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Artery_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Vascular_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0050828"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Artery Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Autoimmune_disease_of_gastrointestinal_tract -->
+    <!-- http://purl.org/ProductKG/disease#Autoimmune_disease_of_gastrointestinal_tract -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Autoimmune_disease_of_gastrointestinal_tract">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Gastrointestinal_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0060031"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Autoimmune_disease_of_gastrointestinal_tract">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Gastrointestinal_system_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0060031"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Autoimmune Disease of Gastrointestinal Tract</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis -->
+    <!-- http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Allergic_contact_dermatitis"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Allergic_contact_dermatitis"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Benzoic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#has_symptom"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Itchy_skin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Benzyl_alcohol"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#has_symptom"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Reddening"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Itchy_skin"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#has_symptom"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Skin_rash"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Reddening"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Benzoic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#has_symptom"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Skin_rash"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredients#Benzyl_alcohol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0040057"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q55009124"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0040057"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q55009124"/>
         <rdfs:label xml:lang="en">Benzoic Acid Allergic Contact Dermatitis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Cardiovascular_system_disease -->
+    <!-- http://purl.org/ProductKG/disease#Cardiovascular_system_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Cardiovascular_system_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1287"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Cardiovascular_system_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1287"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Cardiovascular System Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Disease -->
+    <!-- http://purl.org/ProductKG/disease#Disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Disease">
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q12136"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Disease">
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q12136"/>
         <rdfs:label xml:lang="en">Disease</rdfs:label>
         <rdfs:label xml:lang="de">Krankheiten</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity -->
+    <!-- http://purl.org/ProductKG/disease#Disease_of_anatomical_entity -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_7"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Disease of Anatomical Entity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Disease_of_metabolism -->
+    <!-- http://purl.org/ProductKG/disease#Disease_of_metabolism -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Disease_of_metabolism">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID:0014667"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Disease_of_metabolism">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID:0014667"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Disease of Metabolism</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis -->
+    <!-- http://purl.org/ProductKG/disease#Eosinophillic_esophagitis -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Esophagitis"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Esophagitis"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Ethanol_containing_medium"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/ingredient-disease#Ethanol_containing_medium"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Glycolic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Glycolic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Octadecanoic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Tartaric_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Tartaric_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#ascorbic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#ascorbic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredients#Octadecanoic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_13922"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_13922"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Eosinophillic Esophagitis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Esophageal_disease -->
+    <!-- http://purl.org/ProductKG/disease#Esophageal_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Esophageal_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Gastrointestinal_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_6050"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Esophageal_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Gastrointestinal_system_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_6050"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Esophageal Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Esophagitis -->
+    <!-- http://purl.org/ProductKG/disease#Esophagitis -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Esophagitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Esophageal_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_11963"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Esophagitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Esophageal_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_11963"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Esophagitis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Essential_hypertension -->
+    <!-- http://purl.org/ProductKG/disease#Essential_hypertension -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Essential_hypertension">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_10825"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q988405"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Essential_hypertension">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_10825"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q988405"/>
         <rdfs:label xml:lang="en">Essential Hypertension</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia -->
+    <!-- http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Nutritional_deficiency_disease"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Nutritional_deficiency_disease"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#possible_treatment"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Folic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#possible_treatment"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Folic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_14026"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q18554661"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_14026"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q18554661"/>
         <rdfs:label xml:lang="en">Folic Acid Deficiency Anemia</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Gastrointestinal_system_disease -->
+    <!-- http://purl.org/ProductKG/disease#Gastrointestinal_system_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Gastrointestinal_system_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_77"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Gastrointestinal_system_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_77"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Gastrointestinal System Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Hypertension -->
+    <!-- http://purl.org/ProductKG/disease#Hypertension -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Hypertension">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Artery_disease"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Hypertension">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Artery_disease"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Linoleic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Linoleic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Linolenic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Linolenic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_10763"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q95566669"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_10763"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q95566669"/>
         <rdfs:label xml:lang="en">Hypertension</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Immune_system_disease -->
+    <!-- http://purl.org/ProductKG/disease#Immune_system_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Immune_system_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_2914"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Immune_system_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_2914"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Immune System Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Lactic_acidosis -->
+    <!-- http://purl.org/ProductKG/disease#Lactic_acidosis -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Lactic_acidosis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Metabolic_acidosis"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Lactic_acidosis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Metabolic_acidosis"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Lactic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Lactic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_3650"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q1500373"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_3650"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q1500373"/>
         <rdfs:label xml:lang="en">Lactic Acidosis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Metabolic_acidosis -->
+    <!-- http://purl.org/ProductKG/disease#Metabolic_acidosis -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Metabolic_acidosis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Aquired_metabolic_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0050758"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Metabolic_acidosis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Aquired_metabolic_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_0050758"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Metabolic Acidosis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Nutrition_disease -->
+    <!-- http://purl.org/ProductKG/disease#Nutrition_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Nutrition_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Aquired_metabolic_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_374"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Nutrition_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Aquired_metabolic_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_374"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Nutrition Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Nutritional_deficiency_disease -->
+    <!-- http://purl.org/ProductKG/disease#Nutritional_deficiency_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Nutritional_deficiency_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Nutrition_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_5113"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Nutritional_deficiency_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Nutrition_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_5113"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Nutritional Deficiency Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Scurvy -->
+    <!-- http://purl.org/ProductKG/disease#Scurvy -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Scurvy">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Nutritional_deficiency_disease"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Scurvy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Nutritional_deficiency_disease"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#possible_treatment"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#ascorbic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#possible_treatment"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#ascorbic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org(obo/DOID_13724"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q163865"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org(obo/DOID_13724"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q163865"/>
         <rdfs:label xml:lang="en">Scurvy</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Ulcerative_colitis -->
+    <!-- http://purl.org/ProductKG/disease#Ulcerative_colitis -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Ulcerative_colitis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Autoimmune_disease_of_gastrointestinal_tract"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Ulcerative_colitis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Autoimmune_disease_of_gastrointestinal_tract"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Ethanol_containing_medium"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/ingredient-disease#Ethanol_containing_medium"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_8577"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q1477"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_8577"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q1477"/>
         <rdfs:label xml:lang="en">Ulcerative Colitis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#Vascular_disease -->
+    <!-- http://purl.org/ProductKG/disease#Vascular_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#Vascular_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Cardiovascular_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_178"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#Vascular_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Cardiovascular_system_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_178"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Vascular Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#kidney_disease -->
+    <!-- http://purl.org/ProductKG/disease#kidney_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#kidney_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#urinary_system_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_557"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#kidney_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#urinary_system_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_557"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Kidney Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#kidney_failure -->
+    <!-- http://purl.org/ProductKG/disease#kidney_failure -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#kidney_failure">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#kidney_disease"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1074"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#kidney_failure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#kidney_disease"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_1074"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Kidney Failure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#uremia -->
+    <!-- http://purl.org/ProductKG/disease#uremia -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#uremia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#kidney_failure"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#uremia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#kidney_failure"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Benzyl_alcohol"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredients#Benzyl_alcohol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_4676"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q13365776"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_4676"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q13365776"/>
         <rdfs:label xml:lang="en">Uremia</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/disease#urinary_system_disease -->
+    <!-- http://purl.org/ProductKG/disease#urinary_system_disease -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/disease#urinary_system_disease">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/disease#Disease_of_anatomical_entity"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_18"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#doid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/disease#urinary_system_disease">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/disease#Disease_of_anatomical_entity"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DOID_18"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#doid"/>
         <rdfs:label xml:lang="en">Urinary System Disease</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#Ethanol -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#Ethanol -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/ingredient-disease#Ethanol">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#Ethanols"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16236"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/ingredient-disease#Ethanol">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/ingredient-disease#Ethanols"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16236"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Ethanol</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#Ethanols -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#Ethanol_containing_medium -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/ingredient-disease#Ethanols">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#Primary_alcohol"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23982"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/ingredient-disease#Ethanol_containing_medium">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/ingredient-disease#Ethanol"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Ulcerative_colitis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83166"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q855523"/>
+        <rdfs:label xml:lang="en">Alcohol Denat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/ingredient-disease#Ethanols -->
+
+    <owl:Class rdf:about="http://purl.org/ProductKG/ingredient-disease#Ethanols">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/ingredient-disease#Primary_alcohol"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23982"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Ethanols</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#Primary_alcohol -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#Primary_alcohol -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/ingredient-disease#Primary_alcohol">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Alcohol"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/ingredient-disease#Primary_alcohol">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Alcohol"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15734"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Primary Alcohol</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Acetic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Acetic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Acetic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Monocarboxylic_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15366"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Acetic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Monocarboxylic_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15366"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Acetic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Essigsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Ingredient"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/entity/Q11158"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Ingredient"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q11158"/>
         <rdfs:label xml:lang="en">Acid</rdfs:label>
         <rdfs:label xml:lang="de">Säure</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Acid"/>
@@ -648,11 +634,11 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Alcohol -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Alcohol -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Alcohol">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Ingredient"/>
-        <trust:wikientry xml:lang="en">https://www.wikidata.org/entity/Q156</trust:wikientry>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Alcohol">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Ingredient"/>
+        <wikientry xml:lang="en">https://www.wikidata.org/entity/Q156</wikientry>
         <rdfs:label xml:lang="en">Alcohol</rdfs:label>
         <rdfs:label xml:lang="de">Alkohol</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.productontology.org/id/Alcohol"/>
@@ -660,254 +646,192 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Aldaric_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Aldaric_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Aldaric_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Carboxylic_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22290"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Aldaric_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Carboxylic_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22290"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Aldaric Acid</rdfs:label>
         <rdfs:label xml:lang="de">Aldarsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Alkane -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Alkane -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Alkane">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Ingredient"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18310"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Alkane">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Ingredient"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18310"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="de">Alkan</rdfs:label>
         <rdfs:label xml:lang="en">Alkane</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Alpha_amino_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Alpha_amino_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Alpha_amino_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Amino_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33704"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Alpha_amino_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Amino_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33704"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Alpha Amino Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Amino_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Amino_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Amino_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Carboxylic_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33709"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Amino_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Carboxylic_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33709"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Amino Acid</rdfs:label>
         <rdfs:label xml:lang="de">Aminosäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Aromatic_compound -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Aromatic_compound -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Aromatic_compound">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Ingredient"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33655"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Aromatic_compound">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Ingredient"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33655"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Aromatic Compound</rdfs:label>
         <rdfs:label xml:lang="de">Aromatische Kohlenwasserstoffe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Benzenes -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Benzenes -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Benzenes">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Benzenoid_aromatic_compound"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22712"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Benzenes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Benzenoid_aromatic_compound"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22712"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Benzenes</rdfs:label>
         <rdfs:label xml:lang="de">Benzol</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Benzenoid_aromatic_compound -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Benzenoid_aromatic_compound -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Benzenoid_aromatic_compound">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Organic_aromatic_compound"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33836"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Benzenoid_aromatic_compound">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Organic_aromatic_compound"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33836"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Benzenoid aromatic Compound</rdfs:label>
         <rdfs:label xml:lang="de">Benzoiden Kohlenwasserstoffe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Benzoic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Benzoic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Benzoic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Benzenes"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Benzoic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Benzenes"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22723"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q191700%20"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22723"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q191700%20"/>
         <rdfs:label xml:lang="de">Benzoesäure</rdfs:label>
         <rdfs:label xml:lang="en">Benzoic Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Benzyl_alcohol -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Carboxylic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Benzyl_alcohol">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#Benzyl_alcohols"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#uremia"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Inflamed_eyes"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Itchy_eyes"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17987"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q52353%20"/>
-        <rdfs:label xml:lang="en">Benzyl Alcohol</rdfs:label>
-        <rdfs:label xml:lang="de">Benzylalkohol</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Carboxylic_acid -->
-
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Carboxylic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Organic_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33575"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Carboxylic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Organic_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33575"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="de">Carbonsäure</rdfs:label>
         <rdfs:label xml:lang="en">Carboxylic Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Ethanol_containing_medium -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Fatty_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Ethanol_containing_medium">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#Ethanol"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Ulcerative_colitis"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83166"/>
-        <trust:hasDbXref rdf:resource="https://www.wikidata.org/wiki/Q855523"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <rdfs:label xml:lang="en">Alcohol Denat</rdfs:label>
-        <rdfs:label xml:lang="en">Ethanol-containing Medium</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Fatty_acid -->
-
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Fatty_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35366"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Fatty_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35366"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Fatty Acid</rdfs:label>
         <rdfs:label xml:lang="de">Fettsäuren</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Folic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Folic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Folic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Pteroic_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Folic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Pteroic_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_treatment_for"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Folic_acid_deficiency_anemia"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_treatment_for"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Folic_acid_deficiency_anemia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27470"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q127060"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27470"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q127060"/>
         <rdfs:label xml:lang="de">Folsäure</rdfs:label>
         <rdfs:label xml:lang="en">folic acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Glutamic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Glutamic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Glutamic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Alpha_amino_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Glutamic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Alpha_amino_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Hyperglycinemia"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Hyperglycinemia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18237"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q181136"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18237"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q181136"/>
         <rdfs:label xml:lang="en">Glutamic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Glutaminsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Glycolic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Glycolic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Glycolic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Acetic_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Glycolic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Acetic_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17497"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q409373"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17497"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q409373"/>
         <rdfs:label xml:lang="en">Glycolic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Glycolsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Ingredient -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Ingredient -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Ingredient">
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Ingredient">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">Ingredient</rdfs:label>
         <rdfs:label xml:lang="de">Inhaltsstoff</rdfs:label>
@@ -916,399 +840,380 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Lactic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Lactic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Lactic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#2_hydroxypropanoic_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Lactic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#2_hydroxypropanoic_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Lactic_acidosis"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Lactic_acidosis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Inflamed_eyes"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Inflamed_eyes"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Itchy_eyes"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Itchy_eyes"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Itchy_skin"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Itchy_skin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Skin_rash"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Skin_rash"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_422"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q161249"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_422"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q161249"/>
         <rdfs:label xml:lang="en">Lactic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Milchsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Levulinic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Levulinic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Levulinic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Straight_chain_saturated_fatty_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Levulinic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Straight_chain_saturated_fatty_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Itchy_eyes"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Itchy_eyes"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Itchy_skin"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Itchy_skin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Skin_rash"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Skin_rash"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_45630"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q903322"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_45630"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q903322"/>
         <rdfs:label xml:lang="en">Levulinic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Lävulinsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Linoleic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Linoleic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Linoleic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Octadecadienoic_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Linoleic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Octadecadienoic_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17351"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q407426"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17351"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q407426"/>
         <rdfs:label xml:lang="en">Linoleic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Linolsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Linolenic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Linolenic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Linolenic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Straight_chain_fatty_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Linolenic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Straight_chain_fatty_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Essential_hypertension"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Essential_hypertension"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Hypertension"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Hypertension"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25048"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q111353497"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25048"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q111353497"/>
         <rdfs:label xml:lang="en">Linolenic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Linolensäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Long_chain_alkane -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Long_chain_alkane -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Long_chain_alkane">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Alkane"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83563"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Long_chain_alkane">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Alkane"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83563"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Long Chain Alkane</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Long_chain_fatty_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Long_chain_fatty_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Long_chain_fatty_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Fatty_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15904"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Long_chain_fatty_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Fatty_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15904"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Long Chain Fatty Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Monocarboxylic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Monocarboxylic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Monocarboxylic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Carboxylic_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25384"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Monocarboxylic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Carboxylic_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25384"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="de">Monocarbonsäure</rdfs:label>
         <rdfs:label xml:lang="en">Monocarboxylic Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Octadecadienoic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Octadecadienoic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Octadecadienoic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Long_chain_fatty_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25627"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Octadecadienoic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Long_chain_fatty_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25627"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Octadecadienoic Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Octadecane -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Octadecane -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Octadecane">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Long_chain_alkane"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32926"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Octadecane">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Long_chain_alkane"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_32926"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Octadecane</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Octadecanoic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Organic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Octadecanoic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Octadecane"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28842"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q209685%20"/>
-        <rdfs:label xml:lang="en">Stearic Acid</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">octadecanoic acid</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Organic_acid -->
-
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Organic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64709"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Organic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64709"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Organic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Organische Säure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Organic_aromatic_compound -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Organic_aromatic_compound -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Organic_aromatic_compound">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Aromatic_compound"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33659"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Organic_aromatic_compound">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Aromatic_compound"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33659"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Organic aromatic Compound</rdfs:label>
         <rdfs:label xml:lang="de">Organische Aromatische Kohlenwasserstoffe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Palmitic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Palmitic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Palmitic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Long_chain_fatty_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Palmitic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Long_chain_fatty_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/symptom#Hypercholesterolemia"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Hypercholesterolemia"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15756"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15756"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Palmitic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Palmitinsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Propionic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Propionic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Propionic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Short_chain_fatty_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30768"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Propionic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Short_chain_fatty_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30768"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Propionic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Propionsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Pteroic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Pteroic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Pteroic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Monocarboxylic_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38795"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Pteroic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Monocarboxylic_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38795"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Pteroic Acid</rdfs:label>
         <rdfs:label xml:lang="de">Pteroinsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Saturated_fatty_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Saturated_fatty_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Saturated_fatty_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Fatty_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26607"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Saturated_fatty_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Fatty_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26607"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Saturated Fatty Acid</rdfs:label>
         <rdfs:label xml:lang="de">gesättigte Fettsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Short_chain_fatty_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Short_chain_fatty_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Short_chain_fatty_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Fatty_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/CHEBI_26666"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Short_chain_fatty_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Fatty_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/CHEBI_26666"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Short Chain Fatty Acid</rdfs:label>
         <rdfs:label xml:lang="de">kurzkettige Fettsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Straight_chain_fatty_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Straight_chain_fatty_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Straight_chain_fatty_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Fatty_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59202"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Straight_chain_fatty_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Fatty_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59202"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Straight Chain Fatty Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Straight_chain_saturated_fatty_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Straight_chain_saturated_fatty_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Straight_chain_saturated_fatty_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Saturated_fatty_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_39418"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Straight_chain_saturated_fatty_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Saturated_fatty_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_39418"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Straight Chain Saturated Fatty Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Tartaric_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Tartaric_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Tartaric_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Tetraric_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Tartaric_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Tetraric_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15674"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q194322"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15674"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q194322"/>
         <rdfs:label xml:lang="en">Tartaric Acid</rdfs:label>
         <rdfs:label xml:lang="de">Weinsäure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#Tetraric_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#Tetraric_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#Tetraric_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Aldaric_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26933"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#Tetraric_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Aldaric_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26933"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Tetraric Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#ascorbic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#ascorbic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#ascorbic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#ketoaldonic_acid"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#ascorbic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#ketoaldonic_acid"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_treatment_for"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Scurvy"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_treatment_for"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Scurvy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#triggers"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Eosinophillic_esophagitis"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22652"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q193598"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22652"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q193598"/>
         <rdfs:label xml:lang="en">Ascorbic Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#carbohydrate_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#carbohydrate_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#carbohydrate_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Carboxylic_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33720"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#carbohydrate_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Carboxylic_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33720"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Carbohydrate Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#ketoaldonic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#ketoaldonic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#ketoaldonic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#carbohydrate_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24963"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#ketoaldonic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#carbohydrate_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24963"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Ketoaldonic Acid</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredient#2_hydroxypropanoic_acid -->
+    <!-- http://purl.org/ProductKG/nonfoodingredient#2_hydroxypropanoic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredient#2_hydroxypropanoic_acid">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Propionic_acid"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_78320"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredient#2_hydroxypropanoic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Propionic_acid"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_78320"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">2 hydroxypropanoic acid</rdfs:label>
         <rdfs:label xml:lang="en">L-Lactic Acid</rdfs:label>
         <rdfs:label xml:lang="de">L-Milchsäure</rdfs:label>
@@ -1316,233 +1221,289 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredients#Aromatic_alcohol -->
+    <!-- http://purl.org/ProductKG/nonfoodingredients#Aromatic_alcohol -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#Aromatic_alcohol">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Alcohol"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33854"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredients#Aromatic_alcohol">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Alcohol"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33854"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">aromatic Alcohols</rdfs:label>
         <rdfs:label xml:lang="de">aromatischer Alkohol</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/nonfoodingredients#Benzyl_alcohols -->
+    <!-- http://purl.org/ProductKG/nonfoodingredients#Benzyl_alcohol -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/nonfoodingredients#Benzyl_alcohols">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/nonfoodingredients#Aromatic_alcohol"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22743"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#chebi"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredients#Benzyl_alcohol">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredients#Benzyl_alcohols"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#uremia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Inflamed_eyes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/symptom#Itchy_eyes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17987"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q52353"/>
+        <rdfs:label xml:lang="en">Benzyl Alcohol</rdfs:label>
+        <rdfs:label xml:lang="de">Benzylalkohol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/nonfoodingredients#Benzyl_alcohols -->
+
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredients#Benzyl_alcohols">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredients#Aromatic_alcohol"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22743"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
         <rdfs:label xml:lang="en">Benzyl Alcohols</rdfs:label>
         <rdfs:label xml:lang="de">Benzylalkohole</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_metabolism_and_homeostasis -->
+    <!-- http://purl.org/ProductKG/nonfoodingredients#Octadecanoic_acid -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_metabolism_and_homeostasis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001939"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#hpo"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/nonfoodingredients#Octadecanoic_acid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Octadecane"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#triggers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Eosinophillic_esophagitis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28842"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#chebi"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q209685"/>
+        <rdfs:label xml:lang="en">Stearic Acid</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">octadecanoic acid</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_metabolism_and_homeostasis -->
+
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_metabolism_and_homeostasis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001939"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#hpo"/>
         <rdfs:label xml:lang="en">Abnormality of Metabolism and Homeostasis</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin -->
+    <!-- http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001574"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#hpo"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0001574"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#hpo"/>
         <rdfs:label xml:lang="en">Abnormality of the Integument and Skin</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Abormality_of_the_eye -->
+    <!-- http://purl.org/ProductKG/symptom#Abormality_of_the_eye -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Abormality_of_the_eye">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Symptom"/>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000478"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#hpo"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#symp"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Abormality_of_the_eye">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Symptom"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000478"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#hpo"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#symp"/>
         <rdfs:label xml:lang="en">Abnormality of the Eye</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Hypercholesterolemia -->
+    <!-- http://purl.org/ProductKG/symptom#Hypercholesterolemia -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Hypercholesterolemia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Hypercholesterolemia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Palmitic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Palmitic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0003124"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q762713"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0003124"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#hpo"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q762713"/>
         <rdfs:label xml:lang="de">Hypercholesterinämie</rdfs:label>
         <rdfs:label xml:lang="en">Hypercholesterolemia</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Hyperglycinemia -->
+    <!-- http://purl.org/ProductKG/symptom#Hyperglycinemia -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Hyperglycinemia">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Hyperglycinemia">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_metabolism_and_homeostasis"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Glutamic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Glutamic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002154"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#hpo"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0002154"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#hpo"/>
         <rdfs:label xml:lang="en">Hyperglycinemia</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Inflamed_eyes -->
+    <!-- http://purl.org/ProductKG/symptom#Inflamed_eyes -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Inflamed_eyes">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abormality_of_the_eye"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Inflamed_eyes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abormality_of_the_eye"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Benzyl_alcohol"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Lactic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Lactic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredients#Benzyl_alcohol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000310"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#symp"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/SYMP_0000310"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#symp"/>
         <rdfs:label xml:lang="en">Inflamed Eyes</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Itchy_eyes -->
+    <!-- http://purl.org/ProductKG/symptom#Itchy_eyes -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Itchy_eyes">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abormality_of_the_eye"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Itchy_eyes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abormality_of_the_eye"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Benzyl_alcohol"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Lactic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Lactic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Levulinic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Levulinic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredients#Benzyl_alcohol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0033841"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#hpo"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0033841"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#hpo"/>
         <rdfs:label xml:lang="en">Itchy Eyes</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Itchy_skin -->
+    <!-- http://purl.org/ProductKG/symptom#Itchy_skin -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Itchy_skin">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Itchy_skin">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Lactic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_symptom_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Levulinic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Lactic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Levulinic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000989"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q199602"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000989"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#hpo"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q199602"/>
         <rdfs:label xml:lang="en">Itchy Skin</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Reddening -->
+    <!-- http://purl.org/ProductKG/symptom#Reddening -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Reddening">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Reddening">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_symptom_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0010783"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q1166142"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0010783"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#hpo"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q1166142"/>
         <rdfs:label xml:lang="en">Redness</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Skin_rash -->
+    <!-- http://purl.org/ProductKG/symptom#Skin_rash -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Skin_rash">
-        <rdfs:subClassOf rdf:resource="http://purl.org/NonFoodKG/symptom#Abnormality_of_the_integument_and_skin"/>
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Skin_rash">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/symptom#Abnormality_of_the_integument_and_skin"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Lactic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_symptom_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#is_triggered_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/nonfoodingredient#Levulinic_acid"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Lactic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/NonFoodKG/symptom#is_symptom_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/NonFoodKG/disease#Benzoic_acid_allergic_contact_dermatitis"/>
+                <owl:onProperty rdf:resource="http://purl.org/ProductKG/ingredient-disease#is_triggered_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ProductKG/nonfoodingredient#Levulinic_acid"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <trust:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000988"/>
-        <trust:source rdf:resource="http://purl.org/NonFoodKG/ingredient-disease#hpo"/>
-        <trust:wikientry rdf:resource="https://www.wikidata.org/wiki/Q653197"/>
+        <hasDbXref rdf:resource="http://purl.obolibrary.org/obo/HP_0000988"/>
+        <source rdf:resource="http://purl.org/ProductKG/ingredient-disease#hpo"/>
+        <wikientry rdf:resource="https://www.wikidata.org/entity/Q653197"/>
         <rdfs:label xml:lang="en">Skin Rash</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/NonFoodKG/symptom#Symptom -->
+    <!-- http://purl.org/ProductKG/symptom#Symptom -->
 
-    <owl:Class rdf:about="http://purl.org/NonFoodKG/symptom#Symptom">
+    <owl:Class rdf:about="http://purl.org/ProductKG/symptom#Symptom">
         <rdfs:label xml:lang="en">Symptom</rdfs:label>
     </owl:Class>
     
@@ -1559,33 +1520,33 @@ As long as you:
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#chebi -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#chebi -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/ingredient-disease#chebi">
+    <owl:NamedIndividual rdf:about="http://purl.org/ProductKG/ingredient-disease#chebi">
         <isRealizedBy>https://www.ebi.ac.uk/chebi/init.do</isRealizedBy>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#doid -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#doid -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/ingredient-disease#doid">
+    <owl:NamedIndividual rdf:about="http://purl.org/ProductKG/ingredient-disease#doid">
         <isRealizedBy>http://purl.obolibrary.org/obo/doid.owl</isRealizedBy>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#hpo -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#hpo -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/ingredient-disease#hpo">
+    <owl:NamedIndividual rdf:about="http://purl.org/ProductKG/ingredient-disease#hpo">
         <isRealizedBy>https://hpo.jax.org/app/</isRealizedBy>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/NonFoodKG/ingredient-disease#symp -->
+    <!-- http://purl.org/ProductKG/ingredient-disease#symp -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/NonFoodKG/ingredient-disease#symp">
+    <owl:NamedIndividual rdf:about="http://purl.org/ProductKG/ingredient-disease#symp">
         <isRealizedBy>https://www.ebi.ac.uk/ok</isRealizedBy>
     </owl:NamedIndividual>
 </rdf:RDF>
