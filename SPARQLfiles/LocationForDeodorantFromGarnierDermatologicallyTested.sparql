@@ -1,4 +1,4 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/FoodToNonFoodKG/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ summary: Retrieves shelf location for deodorant that are dermatologically tested with brand "garnier"
 #+ tags: 
@@ -6,11 +6,11 @@
 #+ - brand
 #+ - label
 
-PREFIX brand: <http://purl.org/NonFoodKG/brandinfo#>
+PREFIX brand: <http://purl.org/ProductKG/brandinfo#>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
-PREFIX lbl: <http://purl.org/NonFoodKG/label#>
-PREFIX loc: <http://purl.org/NonFoodKG/location#>
-PREFIX tax: <http://purl.org/NonFoodKG/product-taxonomy#>
+PREFIX lbl: <http://purl.org/ProductKG/label#>
+PREFIX loc: <http://purl.org/ProductKG/location#>
+PREFIX tax: <http://purl.org/ProductKG/product-taxonomy#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?name ?shelf ?shelf_floor WHERE {
