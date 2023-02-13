@@ -1,4 +1,4 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/FoodToNonFoodKG/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ summary: Retrieves shelf location for store brand shampoo without alcohol
 #+ tags: 
@@ -6,12 +6,12 @@
 #+ - brand
 #+ - ingredients
 
-PREFIX in: <http://purl.org/NonFoodKG/nonfoodingredient#>
+PREFIX in: <http://purl.org/ProductKG/nonfoodingredient#>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
-PREFIX brand: <http://purl.org/NonFoodKG/brandinfo#>
-PREFIX loc: <http://purl.org/NonFoodKG/location#>
-PREFIX lbl: <http://purl.org/NonFoodKG/label#>
-PREFIX tax: <http://purl.org/NonFoodKG/product-taxonomy#>
+PREFIX brand: <http://purl.org/ProductKG/brandinfo#>
+PREFIX loc: <http://purl.org/ProductKG/location#>
+PREFIX lbl: <http://purl.org/ProductKG/label#>
+PREFIX tax: <http://purl.org/ProductKG/product-taxonomy#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?name ?company ?shelf ?shelf_floor ?brand WHERE {
