@@ -4,10 +4,10 @@
 #+ tags: 
 #+ - label
 
-PREFIX tax: <http://purl.org/NonFoodKG/product-taxonomy#>
+PREFIX tax: <http://purl.org/ProductKG/product-taxonomy#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
-PREFIX lbl: <http://purl.org/NonFoodKG/label#>
+PREFIX lbl: <http://purl.org/ProductKG/label#>
 
 SELECT ?name ?label ?prod WHERE {
     ?product gr:name ?name.
