@@ -1,4 +1,4 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductCatalog/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ summary: Retrieves location for store brand juice
 #+ tags: 
@@ -6,10 +6,10 @@
 #+ - brand
 
 PREFIX gr: <http://purl.org/goodrelations/v1#>
-PREFIX brand: <http://purl.org/NonFoodKG/brandinfo#>
-PREFIX loc: <http://purl.org/NonFoodKG/location#>
+PREFIX brand: <http://purl.org/ProductKG/brandinfo#>
+PREFIX loc: <http://purl.org/ProductKG/location#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX tax: <http://purl.org/NonFoodKG/product-taxonomy#>
+PREFIX tax: <http://purl.org/ProductKG/product-taxonomy#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?name ?shelf ?shelf_floor ?brand WHERE {
