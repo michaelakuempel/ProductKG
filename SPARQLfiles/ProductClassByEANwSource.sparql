@@ -1,16 +1,15 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/FoodToNonFoodKG/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ summary: Retrieves all product classes and sources for a given EAN
 #+ tags: 
 #+ - source
 
-PREFIX lbl: <http://purl.org/NonFoodKG/label#>
-PREFIX info: <http://knowrob.org/kg/ProductInfo.owl#>
+PREFIX lbl: <http://purl.org/ProductKG/label#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX tax: <http://purl.org/NonFoodKG/product-taxonomy#>
+PREFIX tax: <http://purl.org/ProductKG/product-taxonomy#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
-PREFIX trust: <http://purl.org/NonFoodKG/trust#>
+PREFIX trust: <http://purl.org/ProductKG/trust#>
 
 SELECT ?name ?_EAN ?psource ?class ?classsource WHERE {
     ?product gr:name ?name.
