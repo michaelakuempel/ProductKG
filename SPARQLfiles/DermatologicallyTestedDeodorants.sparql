@@ -1,12 +1,12 @@
-#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/FoodToNonFoodKG/services/FoodToNonFood/sparql
+#+ endpoint: https://api.krr.triply.cc/datasets/mkumpel/ProductKG/services/ProductKG/sparql
 
 #+ tags: 
 #+ - label
 #+ summary: Retrieves all dermatologically tested Deodorants
 
-PREFIX tax: <http://purl.org/NonFoodKG/product-taxonomy#>
+PREFIX tax: <http://purl.org/ProductKG/product-taxonomy#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX lbl: <http://purl.org/NonFoodKG/label#>
+PREFIX lbl: <http://purl.org/ProductKG/label#>
 PREFIX gr: <http://purl.org/goodrelations/v1#>
 
 SELECT ?product ?name WHERE {
