@@ -27,15 +27,15 @@ Based on the product taxonomy, location information in the product location onto
     <th colspan="2"><h3>Routing to product destination</h3></th>
   </tr>
   <tr>
-    <td style="width:50%;">
+    <td style="width:60%;">
 Customers or store workers often search for product locations. We created an AR demo based on the predefined query for product class locations in order to route a customer to a product destination. On the right it is deployed to a HoloLens.
     </td>
-    <td style="width:50%;">
+    <td style="width:40%;">
 <img src="UseCaseImg/Routing.png" width="200" alt="Routing image"/>
     </td>
   </tr>
   <tr>
-    <td style="width:50%;">
+    <td style="width:20%;">
 The App can also be deployed on a Smartphone.
     </td>
     <td style="width:80%;">
@@ -49,7 +49,7 @@ The App can also be deployed on a Smartphone.
     <td style="width:40%;">
 Customers often search for product locations. We implemented a robot shopping assistant that routes a customer to a product destination by answering complex queries.
     </td>
-    <td style="width:50%;">
+    <td style="width:60%;">
 <img src="UseCaseImg/PepperDemo.png" alt="Robot Assistant image"/>
     </td>
   </tr>
@@ -57,7 +57,7 @@ Customers often search for product locations. We implemented a robot shopping as
     <th colspan="2"><h3>Highlighting product information</h3></th>
   </tr>
   <tr>
-    <td style="width:30%;">
+    <td style="width:20%;">
 Customers might be interested in product information. We created an AR app for a Smartphone to highlight interesting product information like awarded labels or ingredients. Additionally, products can be added to a shopping cart.
     </td>
     <td style="width:80%;">
@@ -70,7 +70,7 @@ Customers might be interested in product information. We created an AR app for a
     <th colspan="2"><h3>Nutrition recommender</h3></th>
   </tr>
   <tr>
-    <td style="width:60%;">
+    <td style="width:40%;">
 We also created a nutrition recommender website for <a href="http://productkg.informatik.uni-bremen.de/">ProductKG</a> where users can get nutrition recommendation regarding their dietary profile.
     </td>
     <td style="width:60%;">
