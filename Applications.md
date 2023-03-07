@@ -21,6 +21,8 @@ Based on the product taxonomy, location information in the product location onto
 </td>
   <td style="width:50%;">
 <img src="UseCaseImg/HoloPreference.jpg" alt="highlighting"/>
+    <br>
+    The App can be accessed here: <a href="https://github.com/michaelakuempel/HoloPreferenceDemo">HoloLens App</a>
   </td>
   </tr>
   <tr>
