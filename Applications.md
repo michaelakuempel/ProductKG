@@ -65,7 +65,7 @@ Customers might be interested in product information. We created an AR app for a
     <td style="width:80%;">
 <img src="UseCaseImg/DenkMitRecogsm.jpg" width="80" alt="recognized detergent"/>
       <img src="UseCaseImg/BaleaBodyFotRecogsm.jpg" width="80" alt="recognized bodylotion"/>
-      <img src="UseCaseImg/recipeall_sm.png" width="100" alt="recipe app"/>
+      <img src="UseCaseImg/recipeall_sm.png" width="90" alt="recipe app"/>
     </td>
   </tr>
      <tr>
