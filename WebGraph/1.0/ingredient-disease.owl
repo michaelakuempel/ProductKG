@@ -7,12 +7,28 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Spec="https://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:term="http://purl.org/dc/terms/"
      xmlns:ingredient-disease="http://purl.org/ProductKG/ingredient-disease#">
     <owl:Ontology rdf:about="http://purl.org/ProductKG/ingredient-disease">
-        <owl:versionIRI rdf:resource="http://purl.org/ProductKG/ingredient-disease/1.0"/>
-    </owl:Ontology>
-    
+        <owl:versionIRI rdf:resource="http://purl.org/ProductKG/ingredient-disease/1.1"/>
+        <term:contributor>Michaela Kümpel, Karin Doberstein</term:contributor>
+        <term:license>https://opendatacommons.org/licenses/by/1-0/</term:license>
+        <rdfs:comment>Food ingredients linking to their chemical properties (from CHEBI) and diseases (from DOID) that can be caused by their intake.</rdfs:comment>
+        <Spec:copyright>Copyright (c) 2021 Michaela Kümpel
 
+This work is licensed under Open Data Commons Attribution License (ODC-BY 1.0 license).
+
+You are free:
+
+    To share: To copy, distribute and use the database.
+    To create: To produce works from the database.
+    To adapt: To modify, transform and build upon the database.
+
+As long as you:
+
+    Attribute: Attribute the work to the original authors. You must attribute any public use of the database, or works produced from the database. For any use or redistribution of the database, or works produced from it, you must make clear to others the license of the database and keep intact any notices on the original database.</Spec:copyright>
+    </owl:Ontology>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////

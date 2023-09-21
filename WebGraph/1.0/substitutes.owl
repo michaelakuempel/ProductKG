@@ -7,12 +7,31 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos1="https://www.w3.org/2009/08/skos-reference/skos.html#"
+     xmlns:Spec="https://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:term="http://purl.org/dc/terms/"
+     xmlns:skos="https://www.w3.org/2009/08/skos-reference/skos.html#"
      xmlns:trust="http://purl.org/ProductKG/trust#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.org/ProductKG/substitutes">
         <owl:versionIRI rdf:resource="http://purl.org/ProductKG/substitutes/1.0"/>
+        <term:contributor>Michaela Kümpel, Vanessa Niemeyer</term:contributor>
+        <term:license>https://opendatacommons.org/licenses/by/1-0/</term:license>
+        <rdfs:comment>Recipe ingredients and how they can be substituted for different meal preparation purposes.</rdfs:comment>
+        <Spec:copyright>Copyright (c) 2021 Michaela Kümpel
+
+This work is licensed under Open Data Commons Attribution License (ODC-BY 1.0 license).
+
+You are free:
+
+    To share: To copy, distribute and use the database.
+    To create: To produce works from the database.
+    To adapt: To modify, transform and build upon the database.
+
+As long as you:
+
+    Attribute: Attribute the work to the original authors. You must attribute any public use of the database, or works produced from the database. For any use or redistribution of the database, or works produced from it, you must make clear to others the license of the database and keep intact any notices on the original database.</Spec:copyright>
     </owl:Ontology>
+
     
 
 
@@ -1019,7 +1038,7 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#RapeSeedOil</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Rapeseed oil</rdfs:label>
         <rdfs:label xml:lang="de">Rapsöl</rdfs:label>
-        <skos1:altLabel xml:lang="en">Canola oil</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Canola oil</skos:altLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.org/ProductKG/product-taxonomy#canola_oil"/>
@@ -2234,8 +2253,8 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#AlmondFlour</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Almond flour</rdfs:label>
         <rdfs:label xml:lang="de">Mandelmehl</rdfs:label>
-        <skos1:altLabel xml:lang="en">Almond meal</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Ground almond</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Almond meal</skos:altLabel>
+        <skos:altLabel xml:lang="en">Ground almond</skos:altLabel>
     </owl:Class>
     
 
@@ -5852,7 +5871,7 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#ChickpeaFlour</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Chickpea flour</rdfs:label>
         <rdfs:label xml:lang="de">Kichererbsenmehl</rdfs:label>
-        <skos1:altLabel xml:lang="en">Gram flour</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Gram flour</skos:altLabel>
     </owl:Class>
     
 
@@ -6936,7 +6955,7 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#CoconutFlour</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Coconut flour</rdfs:label>
         <rdfs:label xml:lang="de">Kokosmehl</rdfs:label>
-        <skos1:altLabel xml:lang="de">Kokosnussmehl</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Kokosnussmehl</skos:altLabel>
     </owl:Class>
     
 
@@ -7445,7 +7464,7 @@
         <rdfs:comment xml:lang="en">An edible oil extracted from the kernel or meat of mature coconuts harvested from the coconut palm (Cocos nucifera).</rdfs:comment>
         <rdfs:label xml:lang="en">Coconut oil</rdfs:label>
         <rdfs:label xml:lang="de">Kokosöl</rdfs:label>
-        <skos1:altLabel xml:lang="de">Kokosnussöl</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Kokosnussöl</skos:altLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.org/ProductKG/substitutes#CoconutOil"/>
@@ -7769,8 +7788,8 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#CornOil</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Corn oil</rdfs:label>
         <rdfs:label xml:lang="de">Maisöl</rdfs:label>
-        <skos1:altLabel xml:lang="de">Maiskeimöl</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Maize oil</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Maiskeimöl</skos:altLabel>
+        <skos:altLabel xml:lang="en">Maize oil</skos:altLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.org/ProductKG/substitutes#CornOil"/>
@@ -8255,6 +8274,7 @@
     <!-- http://purl.org/ProductKG/substitutes#CreamCheese -->
 
     <owl:Class rdf:about="http://purl.org/ProductKG/substitutes#CreamCheese">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/substitutes#MilkProduct"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/substitutes#OilAndFatSubstitute"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -8947,13 +8967,12 @@
 
     <owl:Class rdf:about="http://purl.org/ProductKG/substitutes#DeepFrying">
         <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/substitutes#OilCooking"/>
-        <owl:disjointWith rdf:resource="http://purl.org/ProductKG/substitutes#Frying"/>
         <trust:wikientry>https://www.wikidata.org/entity/Q854618</trust:wikientry>
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/FOODON_03450029</oboInOwl:hasDbXref>
         <rdfs:comment xml:lang="en">Cooked in hot fat or oil deep enough to immerse the food entirely.</rdfs:comment>
         <rdfs:label xml:lang="en">Deep frying</rdfs:label>
         <rdfs:label xml:lang="de">Frittieren</rdfs:label>
-        <skos1:altLabel xml:lang="de">Ausbacken</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Ausbacken</skos:altLabel>
     </owl:Class>
     
 
@@ -9309,11 +9328,11 @@
         <rdfs:comment xml:lang="en">Cereal grains from the plant classified under the species Triticum turgidum subsp. durum or Triticum durum, commonly known as Durum wheat grain.</rdfs:comment>
         <rdfs:label xml:lang="en">Durum wheat grain</rdfs:label>
         <rdfs:label xml:lang="de">Hartweizen</rdfs:label>
-        <skos1:altLabel xml:lang="de">Durum</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Durumweizen</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Glasweizen</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Macaroni wheat grain</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Pasta wheat grain</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Durum</skos:altLabel>
+        <skos:altLabel xml:lang="de">Durumweizen</skos:altLabel>
+        <skos:altLabel xml:lang="de">Glasweizen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Macaroni wheat grain</skos:altLabel>
+        <skos:altLabel xml:lang="en">Pasta wheat grain</skos:altLabel>
     </owl:Class>
     
 
@@ -9391,10 +9410,10 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#DurumWheatFlour</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Durum wheat flour</rdfs:label>
         <rdfs:label xml:lang="de">Hartweizenmehl</rdfs:label>
-        <skos1:altLabel xml:lang="de">Durummehl</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Durumweizenmehl</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Macaroni wheat flour</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Pasta wheat flour</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Durummehl</skos:altLabel>
+        <skos:altLabel xml:lang="de">Durumweizenmehl</skos:altLabel>
+        <skos:altLabel xml:lang="en">Macaroni wheat flour</skos:altLabel>
+        <skos:altLabel xml:lang="en">Pasta wheat flour</skos:altLabel>
     </owl:Class>
     
 
@@ -9575,10 +9594,10 @@
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/FOODON_03303411</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Durum wheat semolina</rdfs:label>
         <rdfs:label xml:lang="de">Hartweizengrieß</rdfs:label>
-        <skos1:altLabel xml:lang="de">Durumgrieß</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Durumweizengrieß</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Macaroni wheat semolina</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Pasta wheat semolina</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Durumgrieß</skos:altLabel>
+        <skos:altLabel xml:lang="de">Durumweizengrieß</skos:altLabel>
+        <skos:altLabel xml:lang="en">Macaroni wheat semolina</skos:altLabel>
+        <skos:altLabel xml:lang="en">Pasta wheat semolina</skos:altLabel>
     </owl:Class>
     
 
@@ -9598,7 +9617,7 @@
     <!-- http://purl.org/ProductKG/substitutes#FlourSubstitute -->
 
     <owl:Class rdf:about="http://purl.org/ProductKG/substitutes#FlourSubstitute">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/substitutes#OWLClass_a1c5fc03_6d35_4ef9_8bdb_5eeacec4acad"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/substitutes#GrainProductAlternative"/>
         <rdfs:label xml:lang="en">Flour alternative</rdfs:label>
         <rdfs:label xml:lang="de">Mehlalternative</rdfs:label>
     </owl:Class>
@@ -9819,6 +9838,16 @@
     
 
 
+    <!-- http://purl.org/ProductKG/substitutes#GrainProductAlternative -->
+
+    <owl:Class rdf:about="http://purl.org/ProductKG/substitutes#GrainProductAlternative">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/substitutes#ProductAlternative"/>
+        <rdfs:label xml:lang="de">Getreideproduktalternative</rdfs:label>
+        <rdfs:label xml:lang="en">Grain product alternative</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/ProductKG/substitutes#GrainSubstitute -->
 
     <owl:Class rdf:about="http://purl.org/ProductKG/substitutes#GrainSubstitute">
@@ -9869,8 +9898,8 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#Groats</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Groats</rdfs:label>
         <rdfs:label xml:lang="de">Schrot</rdfs:label>
-        <skos1:altLabel xml:lang="de">Graupen</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Whole grain</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Graupen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Whole grain</skos:altLabel>
     </owl:Class>
     
 
@@ -9992,7 +10021,7 @@
         <trust:wikientry>https://www.wikidata.org/entity/Q422071</trust:wikientry>
         <rdfs:label xml:lang="de">Guakernmehl</rdfs:label>
         <rdfs:label xml:lang="en">Guar gum flour</rdfs:label>
-        <skos1:altLabel xml:lang="de">Guaranmehl</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Guaranmehl</skos:altLabel>
     </owl:Class>
     
 
@@ -10598,7 +10627,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="de">Hülsenfruchtmehl</rdfs:label>
         <rdfs:label xml:lang="en">Legume flour</rdfs:label>
-        <skos1:altLabel xml:lang="en">Pulse flour</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Pulse flour</skos:altLabel>
     </owl:Class>
     
 
@@ -10703,7 +10732,7 @@
         <rdfs:comment xml:lang="en">A seed of a flax plant (Linum usitatissimum).</rdfs:comment>
         <rdfs:label xml:lang="de">Leinsamen</rdfs:label>
         <rdfs:label xml:lang="en">Linseed</rdfs:label>
-        <skos1:altLabel xml:lang="en">Flaxseed</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Flaxseed</skos:altLabel>
     </owl:Class>
     
 
@@ -10772,7 +10801,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="de">Leinsamenmehl</rdfs:label>
         <rdfs:label xml:lang="en">Linseed flour</rdfs:label>
-        <skos1:altLabel xml:lang="en">Flaxseed flour</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Flaxseed flour</skos:altLabel>
     </owl:Class>
     
 
@@ -10966,7 +10995,7 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#MaizeFlakes</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="de">Maisflocken</rdfs:label>
         <rdfs:label xml:lang="en">Maize flakes</rdfs:label>
-        <skos1:altLabel xml:lang="en">Corn flakes</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Corn flakes</skos:altLabel>
     </owl:Class>
     
 
@@ -11344,7 +11373,7 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#MaizeFlour</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="de">Maismehl</rdfs:label>
         <rdfs:label xml:lang="en">Maize flour</rdfs:label>
-        <skos1:altLabel xml:lang="en">Corn flour</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Corn flour</skos:altLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.org/ProductKG/substitutes#MaizeFlour"/>
@@ -11559,7 +11588,7 @@
         <rdfs:comment xml:lang="en">Cereal grains from the plant classified under the species Zea mays L. subsp. mays, commonly known as Maize grain or Corn grain.</rdfs:comment>
         <rdfs:label xml:lang="de">Mais</rdfs:label>
         <rdfs:label xml:lang="en">Maize grain</rdfs:label>
-        <skos1:altLabel xml:lang="en">Corn grain</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Corn grain</skos:altLabel>
     </owl:Class>
     
 
@@ -11739,7 +11768,7 @@
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/FOODON_03540105</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="de">Maisgrieß</rdfs:label>
         <rdfs:label xml:lang="en">Maize semolina</rdfs:label>
-        <skos1:altLabel xml:lang="en">Corn semolina</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Corn semolina</skos:altLabel>
     </owl:Class>
     
 
@@ -12101,6 +12130,14 @@
     
 
 
+    <!-- http://purl.org/ProductKG/substitutes#MilkAlternative -->
+
+    <owl:Class rdf:about="http://purl.org/ProductKG/substitutes#MilkAlternative">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/substitutes#ProductAlternative"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/ProductKG/substitutes#MilkFat -->
 
     <owl:Class rdf:about="http://purl.org/ProductKG/substitutes#MilkFat">
@@ -12109,6 +12146,14 @@
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/FOODON_00002681</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="de">Milchfett</rdfs:label>
         <rdfs:label xml:lang="en">Milk fat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ProductKG/substitutes#MilkProduct -->
+
+    <owl:Class rdf:about="http://purl.org/ProductKG/substitutes#MilkProduct">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/label#Product"/>
     </owl:Class>
     
 
@@ -13085,7 +13130,7 @@
         <oboInOwl:hasDbXref>http://purl.obolibrary.org/obo/FOODON_03301502</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">Natural yogurt</rdfs:label>
         <rdfs:label xml:lang="de">Naturjoghurt</rdfs:label>
-        <skos1:altLabel xml:lang="en">Plain yogurt</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Plain yogurt</skos:altLabel>
     </owl:Class>
     
 
@@ -13131,16 +13176,6 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#NutOil</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="de">Nussöl</rdfs:label>
         <rdfs:label xml:lang="en">Nut oil</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/ProductKG/substitutes#OWLClass_a1c5fc03_6d35_4ef9_8bdb_5eeacec4acad -->
-
-    <owl:Class rdf:about="http://purl.org/ProductKG/substitutes#OWLClass_a1c5fc03_6d35_4ef9_8bdb_5eeacec4acad">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ProductKG/substitutes#ProductAlternative"/>
-        <rdfs:label xml:lang="de">Getreideproduktalternative</rdfs:label>
-        <rdfs:label xml:lang="en">Grain product alternative</rdfs:label>
     </owl:Class>
     
 
@@ -13982,9 +14017,9 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#OatGroats</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="de">Haferschrot</rdfs:label>
         <rdfs:label xml:lang="en">Oat groats</rdfs:label>
-        <skos1:altLabel xml:lang="en">Coarse oatmeal</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Irish oatmeal</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Pinhead oats</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Coarse oatmeal</skos:altLabel>
+        <skos:altLabel xml:lang="en">Irish oatmeal</skos:altLabel>
+        <skos:altLabel xml:lang="en">Pinhead oats</skos:altLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.org/ProductKG/substitutes#OatGroats"/>
@@ -16549,7 +16584,7 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#RiceBranOil</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="de">Reisöl</rdfs:label>
         <rdfs:label xml:lang="en">Rice oil</rdfs:label>
-        <skos1:altLabel xml:lang="de">Reiskeimöl</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Reiskeimöl</skos:altLabel>
     </owl:Class>
     
 
@@ -17482,8 +17517,8 @@
         <rdfs:comment xml:lang="de"></rdfs:comment>
         <rdfs:label xml:lang="de">Braten in Wärmestrahlung</rdfs:label>
         <rdfs:label xml:lang="en">Roasting</rdfs:label>
-        <skos1:altLabel xml:lang="de">Grillen</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Grilling</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Grillen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Grilling</skos:altLabel>
     </owl:Class>
     
 
@@ -17796,7 +17831,7 @@
         <rdfs:comment xml:lang="en">Milled and reconstructed flakes made from oats and usually served as a cold cereal product.</rdfs:comment>
         <rdfs:label xml:lang="de">Haferflocken</rdfs:label>
         <rdfs:label xml:lang="en">Oat flakes</rdfs:label>
-        <skos1:altLabel>Rolled oat</skos1:altLabel>
+        <skos:altLabel>Rolled oat</skos:altLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.org/ProductKG/substitutes#RolledOat"/>
@@ -18856,7 +18891,7 @@
         <rdfs:comment xml:lang="en">Cooking in a very small amount of very hot fat, turning and browning the food on all sides.</rdfs:comment>
         <rdfs:label xml:lang="de">Sautieren</rdfs:label>
         <rdfs:label xml:lang="en">Sautéing</rdfs:label>
-        <skos1:altLabel xml:lang="de">Pfannenrühren</skos1:altLabel>
+        <skos:altLabel xml:lang="de">Pfannenrühren</skos:altLabel>
     </owl:Class>
     
 
@@ -18870,7 +18905,7 @@
         <rdfs:comment xml:lang="en">Searing (or pan searing) is a technique used in grilling, roasting, braising, sautéing, etc. that cooks the surface of the food (usually meat, poultry or fish) at high temperature so that a brownish crust forms by Maillard reaction and denaturation of proteins.</rdfs:comment>
         <rdfs:label xml:lang="de">Anbraten</rdfs:label>
         <rdfs:label xml:lang="en">Searing</rdfs:label>
-        <skos1:altLabel xml:lang="en">Pan searing</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Pan searing</skos:altLabel>
     </owl:Class>
     
 
@@ -22469,11 +22504,11 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#WheatFlour</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="de">Weizenmehl</rdfs:label>
         <rdfs:label xml:lang="en">Wheat flour</rdfs:label>
-        <skos1:altLabel xml:lang="en">Bread flour</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Brotweizenmehl</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Common wheat flour</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Saat-Weizenmehl</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Weichweizenmehl</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Bread flour</skos:altLabel>
+        <skos:altLabel xml:lang="de">Brotweizenmehl</skos:altLabel>
+        <skos:altLabel xml:lang="en">Common wheat flour</skos:altLabel>
+        <skos:altLabel xml:lang="de">Saat-Weizenmehl</skos:altLabel>
+        <skos:altLabel xml:lang="de">Weichweizenmehl</skos:altLabel>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.org/ProductKG/substitutes#WheatFlour"/>
@@ -22683,11 +22718,11 @@
         <rdfs:comment xml:lang="en">Cereal grains from the plant classified under the species Triticum aestivum L., commonly known as Common wheat grain.</rdfs:comment>
         <rdfs:label xml:lang="de">Weizen</rdfs:label>
         <rdfs:label xml:lang="en">Wheat grain</rdfs:label>
-        <skos1:altLabel xml:lang="en">Bread wheat</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Brotweizen</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Common wheat</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Saat-Weizen</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Weichweizen</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Bread wheat</skos:altLabel>
+        <skos:altLabel xml:lang="de">Brotweizen</skos:altLabel>
+        <skos:altLabel xml:lang="en">Common wheat</skos:altLabel>
+        <skos:altLabel xml:lang="de">Saat-Weizen</skos:altLabel>
+        <skos:altLabel xml:lang="de">Weichweizen</skos:altLabel>
     </owl:Class>
     
 
@@ -22917,11 +22952,11 @@
         <oboInOwl:hasDbXref>http://www.baall.de/ontologies/FOD.owl#WheatSemolina</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="de">Weizengrieß</rdfs:label>
         <rdfs:label xml:lang="en">Wheat semolina</rdfs:label>
-        <skos1:altLabel xml:lang="en">Bread wheat semolina</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Brotweizengrieß</skos1:altLabel>
-        <skos1:altLabel xml:lang="en">Common wheat semolina</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Saat-Weizengrieß</skos1:altLabel>
-        <skos1:altLabel xml:lang="de">Weichweizengrieß</skos1:altLabel>
+        <skos:altLabel xml:lang="en">Bread wheat semolina</skos:altLabel>
+        <skos:altLabel xml:lang="de">Brotweizengrieß</skos:altLabel>
+        <skos:altLabel xml:lang="en">Common wheat semolina</skos:altLabel>
+        <skos:altLabel xml:lang="de">Saat-Weizengrieß</skos:altLabel>
+        <skos:altLabel xml:lang="de">Weichweizengrieß</skos:altLabel>
     </owl:Class>
     
 
@@ -23699,8 +23734,8 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/ProductKG/substitutes#GrainProductAlternative"/>
             <rdf:Description rdf:about="http://purl.org/ProductKG/substitutes#GrainSubstitute"/>
-            <rdf:Description rdf:about="http://purl.org/ProductKG/substitutes#OWLClass_a1c5fc03_6d35_4ef9_8bdb_5eeacec4acad"/>
             <rdf:Description rdf:about="http://purl.org/ProductKG/substitutes#OilAndFatSubstitute"/>
         </owl:members>
     </rdf:Description>
