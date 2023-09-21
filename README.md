@@ -6,8 +6,7 @@ ProductKG is a knowledge graph created from Web information, interlinking differ
 <small>Kümpel, M., Mueller, C.A., Beetz, M. (2021). <a href="https://link.springer.com/chapter/10.1007/978-3-030-88662-2_7"><i>Semantic Digital Twins for Retail Logistics</i></a>. In: Freitag, M., Kotzab, H., Megow, N. (eds) <b>Dynamics in Logistics</b>. Springer, Cham.</small><br>
 
 <img src="UseCaseImg/ProductKG_v2.png" width="600" alt="ProductKG"/><br>
-<small>Kümpel, M. and Beetz, M. (2023). <i>ProductKG: A Product Knowledge Graph for User Assistance in Daily Activities</i>. In: <b>Ontology Showcase and Demon-
-strations Track, 9th Joint Ontology Workshops (JOWO 2023), co-located with FOIS 2023</b>. 19-20 July, 2023, Sherbrooke, Quèbec, Canada, 2023.</small><br>
+<small>Kümpel, M. and Beetz, M. (2023). <i>ProductKG: A Product Knowledge Graph for User Assistance in Daily Activities</i>. In: <b>Ontology Showcase and Demonstrations Track, 9th Joint Ontology Workshops (JOWO 2023), co-located with FOIS 2023</b>. 19-20 July, 2023, Sherbrooke, Quèbec, Canada, 2023.</small><br>
 
 
 The <b>product location ontology</b> therefore stores inventory data like stock and price of products as well as their positions relative to shelves (instead of coordinates). We use the <a href="http://knowrob.org/">KnowRob knowledge processing system</a> for creation of the location ontology. In KnowRob, a robot can access specific position information of the perceived objects. The <b>product taxonomy</b> classifies products that were recognized during stocktaking. It is linked to an <b>ingredients classification</b> based on string matching, which is connected to an <b>allergen classification</b>. Ingredients also link to <b>substitutes, diseases, symptoms</b> and treatments in form of <b>nutritients</b>. The product taxonomy is linked to further product information like name and place of production in <b>product information</b>,<b> product label, brand</b> or <b>product dimensions</b>, i.e. dimensions of product packaging as well as product weight/ filling information. Since food products play an important role in daily activities, ProductKG also includes <b>nutrition</b> information and provides a user profile and quantity ontology for personalisation.
@@ -30,8 +29,7 @@ We created some predefined queries for everyone to test all versions of ProductK
 This ProductKG is made available under the <a href="http://opendatacommons.org/licenses/by/1.0/">Open Data Commons Attribution License</a>.
 
 Please cite it as:<br>
-Kümpel, M. and Beetz, M. (2023). <i>ProductKG: A Product Knowledge Graph for User Assistance in Daily Activities</i>. In: <b>Ontology Showcase and Demon-
-strations Track, 9th Joint Ontology Workshops (JOWO 2023), co-located with FOIS 2023</b>. 19-20 July, 2023, Sherbrooke, Quèbec, Canada, 2023.
+Kümpel, M. and Beetz, M. (2023). <i>ProductKG: A Product Knowledge Graph for User Assistance in Daily Activities</i>. In: <b>Ontology Showcase and Demonstrations Track, 9th Joint Ontology Workshops (JOWO 2023), co-located with FOIS 2023</b>. 19-20 July, 2023, Sherbrooke, Quèbec, Canada, 2023.
 
 
 This knowledge graph has been created by the <a href="https://ai.uni-bremen.de/">Institute for Artificial Intelligence</a> at the University of Bremen. Please contact <a href="https://ai.uni-bremen.de/team/michaela_k%C3%BCmpel">Michaela Kümpel</a> for further info or collaboration: michaela(dot)kuempel(at)uni-bremen(dot)de
