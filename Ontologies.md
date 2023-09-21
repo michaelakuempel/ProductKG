@@ -16,23 +16,31 @@ Please check out the ontologies here:
   <tr>
     <td style="width:15%;"><b>Version 1.0</b></td></tr>
 <tr>
-  <td><a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/product-taxonomy.owl">Product Taxonomy</a><hr>
+  <td><a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/product-taxonomy.owl">Product Taxonomy</a></td></tr>
+  <tr><td>
   <a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/linkFoodOn.owl">link to FoodOn</a></td>
   </tr>
 <tr>
-<td><a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/nonfood-ingredient.owl">non-food Ingredients</a><hr>
-<a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/food-ingredient.owl">food Ingredients</a><hr>
-<a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/ingredient-disease.owl">Ingredients to diseases</a><hr>
-<a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/substitutes.owl">Ingredient substitution</a> <hr>
+<td><a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/nonfood-ingredient.owl">non-food Ingredients</a></td></tr>
+  <tr><td>
+<a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/food-ingredient.owl">food Ingredients</a></td></tr>
+  <tr><td>
+<a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/ingredient-disease.owl">Ingredients to diseases</a></td></tr>
+  <tr><td>
+<a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/substitutes.owl">Ingredient substitution</a> </td></tr>
+  <tr><td>
 <a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/recipe-ingredient.zip">Recipes to Ingredients (zipped)</a></td>
   </tr>
   <tr>
 <td><a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/allergen.owl">Allergen Ontology</a></td>
   </tr>
   <tr>
-    <td><a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/symptom-nutrition.owl">symptom to nutrition</a><hr>
-      <a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/nutrition.owl">nutrition</a><hr>
-      <a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/food-nutrition.zip">nutrition to food (zipped)</a><hr>
+    <td><a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/symptom-nutrition.owl">symptom to nutrition</a></td></tr>
+  <tr><td>
+      <a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/nutrition.owl">nutrition</a></td></tr>
+  <tr><td>
+      <a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/food-nutrition.zip">nutrition to food (zipped)</a></td></tr>
+  <tr><td>
     <a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/symptom-disease.owl">symtom to disease</a></td>
   </tr>
   <tr>
