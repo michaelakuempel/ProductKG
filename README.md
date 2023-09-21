@@ -5,7 +5,7 @@ ProductKG is a knowledge graph created from Web information, interlinking differ
 <img src="UseCaseImg/semDTCompose2.jpg" width="600" alt="semantic Digital Twin"/><br>
 <small>Kümpel, M., Mueller, C.A., Beetz, M. (2021). <a href="https://link.springer.com/chapter/10.1007/978-3-030-88662-2_7"><i>Semantic Digital Twins for Retail Logistics</i></a>. In: Freitag, M., Kotzab, H., Megow, N. (eds) <b>Dynamics in Logistics</b>. Springer, Cham.</small><br>
 
-<img src="UseCaseImg/ProductKG2.jpg" width="600" alt="ProductKG"/><br>
+<img src="UseCaseImg/ProductKG2.png" width="600" alt="ProductKG"/><br>
 <small>Kümpel, M. and Beetz, M. (2023). <i>ProductKG: A Product Knowledge Graph for User Assistance in Daily Activities</i>. In: <b>Ontology Showcase and Demon-
 strations Track, 9th Joint Ontology Workshops (JOWO 2023), co-located with FOIS 2023</b>. 19-20 July, 2023, Sherbrooke, Qu ́ebec, Canada, 2023.</small><br>
 
