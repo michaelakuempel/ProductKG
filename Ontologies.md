@@ -23,7 +23,8 @@ Please check out the ontologies here:
 <td><a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/nonfood-ingredient.owl">non-food Ingredients</a><hr>
 <a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/food-ingredient.owl">food Ingredients</a><hr>
 <a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/ingredient-disease.owl">Ingredients to diseases</a><hr>
-<a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/ingredient-substitute.owl">Ingredient substitution</a>  </td>
+<a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/substitutes.owl">Ingredient substitution</a> <hr>
+<a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/recipe-ingredient.owl">Recipes to Ingredients</a></td>
   </tr>
   <tr>
 <td><a href="https://raw.githubusercontent.com/michaelakuempel/ProductKG/master/WebGraph/1.0/allergen.owl">Allergen Ontology</a></td>
