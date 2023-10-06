@@ -1,8 +1,8 @@
-title: NonFoodKG API
-description: Accessing NonFoodKG information
+title: ProductKG API
+description: Accessing ProductKG information
 contact:
   name: Michaela Kümpel
-  url: https://github.com/K4R-IAI/NonFoodKG
+  url: https://github.com/michaelakuempel/ProductKG
 licence: https://opendatacommons.org/licenses/by/1-0/
 queries:
-  - https://github.com/K4R-IAI/NonFoodKG/master/SPARQLfiles/
+  - https://github.com/michaelakuempel/ProductKG/master/SPARQLfiles/
