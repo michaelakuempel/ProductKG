@@ -22,7 +22,21 @@ The knowledge graph is publicly available here and on <a href="https://krr.tripl
 We created some predefined queries for everyone to test all versions of ProductKG via the <a href="http://grlc.io/api/michaelakuempel/ProductKG/SPARQLfiles/">ProductKG grlc api</a>. grlc is a git repository linked data API constructor that automatically builds Web APIs using shared SPARQL queries <a href="https://github.com/CLARIAH/grlc">(grlc on github)</a>
 <h3>Version 1.0</h3> <a href="https://krr.triply.cc/mkumpel/ProductKG/sparql/ProductKG">ProductKG via triply SPARQL api</a>
 
+# Reference
 
+Please cite this as:
+
+```bash
+@article{kumpel2023productkg,
+  title={ProductKG: A Product Knowledge Graph for User Assistance in Daily Activities},
+  author={K{\"u}mpel, Michaela and Beetz, Michael},
+  booktitle={FOIS'23: Ontology Showcase and Demonstrations Track, 9th Joint Ontology Workshops (JOWO 2023), co-located with FOIS 2023, 19-20 July, 2023, Sherbrooke, Québec, Canada},
+  url={https://ceur-ws.org/Vol-3637/paper52.pdf},
+  volume={3637},
+  year={2023},
+  keywords  = {knowledge representation, product knowledge, daily applications}
+}
+```
 
 # Disclaimer
 
